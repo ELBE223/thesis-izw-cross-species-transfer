@@ -1,6 +1,6 @@
 # Cross-Species Transfer in Terrestrial Mammal Behavior Classification
 
-R and Python scripts for my thesis at IZW on cross-species transfer in terrestrial mammal behavior classification using tri-axial accelerometer data.
+R and Python scripts for my thesis at the Leibniz Institute for Zoo and Wildlife Research (IZW) on cross-species transfer in terrestrial mammal behavior classification using tri-axial accelerometer data.
 
 <img width="239" height="239" alt="image" src="https://github.com/user-attachments/assets/b571eb29-b010-4de4-b79e-93acc17463b1" />
 
@@ -10,16 +10,16 @@ This repository contains R and Python scripts for analysing multiple tri-axial a
 
 The project investigates how well behaviour classification models generalise across datasets and species, and whether transfer performance depends on behavioural class and biological distance between species.
 
-Included species currently comprise:
+The species currently included are:
 
 - Dog
-- Fox
+- Fox (two datasets)
 - Hedgehog
 - Bison
 - Cattle
-- Horse
+- Horse (two datasets)
 - Giraffe
-- Raccoon
+- Raccoon (two datasets)
 
 ## Research question
 
@@ -29,11 +29,11 @@ To what extent do behaviour classification models trained on accelerometer data 
 
 - **H1 (transfer gap):** Behaviour classification performance will be higher in within-dataset evaluations than in cross-dataset transfer evaluations.
 - **H2 (behaviour-class effect):** Cross-dataset performance differs across broad behavioural classes.
-- **H3 (distance effect):** Cross-species transfer performance will decline with increasing biological distance between source and target species.
+- **H3 (distance effect):** Cross-species transfer performance declines with increasing biological distance between source and target species.
 
 ## Models
 
-We selected six models representing three complementary modelling families:
+This project includes six models from three complementary modelling families:
 
 - **Feature-based tree ensembles:** Random Forest, LightGBM
 - **Deep learning on raw time series:** baseline CNN, InceptionTime
@@ -53,20 +53,28 @@ Together, these settings separate within-dataset accuracy from increasingly chal
 
 ## Repository structure
 
-- `R/` – R scripts
-- `python/` – Python scripts
-- `outputs/` – processed outputs
+- `R/` – data preparation, statistical analysis, and visualisation
+- `python/` – modelling and classification scripts
+- `outputs/` – processed results and exported tables
 - `figures/` – plots and visual outputs
 - `images/` – README images
 
 ## Data availability
 
-Most datasets used in this project are not publicly available.
+Most datasets used in this project are not publicly available and therefore cannot be shared in this repository.
 
 Publicly available datasets used in this project include:
 
 - [*Horsing Around -- A Dataset Comprising Horse Movement*](https://data.4tu.nl/articles/_/12687551/1) (Horse)
 - [*Japanese Black Beef Cow Behavior Classification Dataset*](https://zenodo.org/records/5849025#.ZE-y_3ZByHu) (Cattle)
+
+## Reproducibility
+
+This repository provides the code used for data processing, modelling, evaluation, and visualisation. Full reproduction of all analyses is limited by dataset availability.
+
+## Citation
+
+Citation details for the thesis and repository will be added after submission/publication.
 
 ## License
 
