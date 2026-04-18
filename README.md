@@ -1,4 +1,4 @@
-# thesis-izw-cross-species-transfer
+# Cross-Species Transfer in Terrestrial Mammal Behavior Classification
 
 R and Python scripts for my thesis at IZW on cross-species transfer in terrestrial mammal behavior classification using tri-axial accelerometer data.
 
@@ -55,9 +55,18 @@ Together, these settings separate within-dataset accuracy from increasingly chal
 
 - `R/` – R scripts
 - `python/` – Python scripts
-- `data/` – data placeholders or processed outputs
+- `outputs/` – processed outputs
 - `figures/` – plots and visual outputs
 - `images/` – README images
+
+## Data availability
+
+Most datasets used in this project are not publicly available.
+
+Publicly available datasets used in this project include:
+
+- [*Horsing Around -- A Dataset Comprising Horse Movement*](https://data.4tu.nl/articles/_/12687551/1) (Horse)
+- [*Japanese Black Beef Cow Behavior Classification Dataset*](https://zenodo.org/records/5849025#.ZE-y_3ZByHu) (Cattle)
 
 ## License
 
