@@ -1,0 +1,10 @@
+species,body_mass_rank,locomotor_mode,body_plan,movement_amplitude,maneuverability,head_neck_motion_importance,activity_pattern,vertical_motion_scope,defensive_posture_specialisation,postural_compaction
+Bison bonasus,4,cursorial,robust_quadruped,moderate,low,high,diurnal,low_vegetation,low,low
+Bos taurus,4,cursorial,robust_quadruped,moderate,low,high,diurnal,low_vegetation,low,low
+Canis lupus familiaris,3,cursorial,standard_quadruped,high,high,moderate,flexible,ground_level,low,low
+Equus caballus,4,cursorial,standard_quadruped,high,moderate,moderate,diurnal,low_vegetation,low,low
+Equus ferus przewalskii,4,cursorial,standard_quadruped,high,moderate,moderate,diurnal,low_vegetation,low,low
+Erinaceus europaeus,1,semifossorial,compact_body,low,low,low,nocturnal,ground_cover,very_high,very_high
+Giraffa camelopardalis,4,cursorial,tall_long_neck,very_high,low,very_high,diurnal,high_browse,low,low
+Procyon lotor,2,scansorial_generalist,standard_quadruped,moderate,high,high,nocturnal,ground_tree_mixed,low,moderate
+Vulpes vulpes,2,cursorial,standard_quadruped,high,high,moderate,nocturnal_crepuscular,ground_level,low,low
