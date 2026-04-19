@@ -72,11 +72,11 @@ format_median_iqr <- function(median_x, q1_x, q3_x) {
 
 first_existing_col <- function(df, candidates) {
   hit <- candidates[candidates %in% names(df)][1]
-
+  
   if (length(hit) == 0 || is.na(hit)) {
     return(rep(NA_character_, nrow(df)))
   }
-
+  
   as.character(df[[hit]])
 }
 
@@ -97,11 +97,11 @@ direction_from_diff <- function(x) {
 
 append_section <- function(lines, title, obj = NULL) {
   section_header <- c(paste0(strrep("=", 18), " ", title, " ", strrep("=", 18)))
-
+  
   if (is.null(obj)) {
     return(c(lines, "", section_header, ""))
   }
-
+  
   body <- capture.output(print(obj))
   c(lines, "", section_header, body)
 }
@@ -114,7 +114,7 @@ collect_recursive_behavior_files <- function(stats_dir) {
   if (!dir.exists(stats_dir)) {
     return(character())
   }
-
+  
   files <- list.files(stats_dir, recursive = TRUE, full.names = TRUE)
   keep  <- basename(files) %in% c("behavior_metrics.csv", "metrics_by_behavior.csv")
   files[keep]
@@ -124,14 +124,14 @@ read_behavior_source <- function(model, comparison, aggregated_file, stats_dir) 
   if (!is.na(aggregated_file) && file.exists(aggregated_file)) {
     dt <- read_csv(aggregated_file, show_col_types = FALSE)
     missing_cols <- setdiff(required_cols, names(dt))
-
+    
     if (length(missing_cols) > 0) {
       stop(
         model, " ", comparison, " aggregated file missing cols: ",
         paste(missing_cols, collapse = ", ")
       )
     }
-
+    
     return(
       dt %>%
         mutate(
@@ -142,26 +142,26 @@ read_behavior_source <- function(model, comparison, aggregated_file, stats_dir) 
         )
     )
   }
-
+  
   files <- collect_recursive_behavior_files(stats_dir)
-
+  
   if (length(files) == 0) {
     return(tibble())
   }
-
+  
   map_dfr(files, function(f) {
     dt <- read_csv(f, show_col_types = FALSE)
     missing_cols <- setdiff(required_cols, names(dt))
-
+    
     if (length(missing_cols) > 0) {
       stop(
         model, " ", comparison, " file missing cols: ", f,
         " | missing: ", paste(missing_cols, collapse = ", ")
       )
     }
-
+    
     parent_id <- basename(dirname(f))
-
+    
     dt %>%
       mutate(
         model       = model,
@@ -181,17 +181,17 @@ safe_friedman_extended <- function(df, value_col, group_col, block_col,
     mutate(group_tmp = factor(.data[[group_col]], levels = group_levels)) %>%
     filter(!is.na(group_tmp)) %>%
     select(all_of(c(value_col, block_col)), group_tmp)
-
+  
   complete_blocks <- use_dt %>%
     count(.data[[block_col]], group_tmp, name = "n") %>%
     count(.data[[block_col]], name = "n_groups") %>%
     filter(n_groups == length(group_levels)) %>%
     pull(.data[[block_col]])
-
+  
   use_dt <- use_dt %>% filter(.data[[block_col]] %in% complete_blocks)
   n_blocks <- dplyr::n_distinct(use_dt[[block_col]])
   n_groups <- length(group_levels)
-
+  
   if (n_blocks < 2 || n_groups < 2) {
     return(tibble(
       n_blocks = n_blocks,
@@ -201,10 +201,10 @@ safe_friedman_extended <- function(df, value_col, group_col, block_col,
       kendalls_w = NA_real_
     ))
   }
-
+  
   fml <- as.formula(paste(value_col, "~ group_tmp |", block_col))
   tmp <- tryCatch(friedman.test(fml, data = use_dt), error = function(e) NULL)
-
+  
   if (is.null(tmp)) {
     return(tibble(
       n_blocks = n_blocks,
@@ -214,9 +214,9 @@ safe_friedman_extended <- function(df, value_col, group_col, block_col,
       kendalls_w = NA_real_
     ))
   }
-
+  
   chi_sq <- unname(tmp$statistic)
-
+  
   tibble(
     n_blocks   = n_blocks,
     statistic  = chi_sq,
@@ -233,15 +233,15 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
     mutate(group_tmp = factor(.data[[group_col]], levels = group_levels)) %>%
     filter(!is.na(group_tmp)) %>%
     select(all_of(c(value_col, block_col)), group_tmp)
-
+  
   complete_blocks <- use_dt %>%
     count(.data[[block_col]], group_tmp, name = "n") %>%
     count(.data[[block_col]], name = "n_groups") %>%
     filter(n_groups == length(group_levels)) %>%
     pull(.data[[block_col]])
-
+  
   use_dt <- use_dt %>% filter(.data[[block_col]] %in% complete_blocks)
-
+  
   if (nrow(use_dt) == 0 || dplyr::n_distinct(use_dt[[block_col]]) < 2) {
     return(tibble(
       contrast = character(),
@@ -255,30 +255,30 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
       direction = character()
     ))
   }
-
+  
   wide_dt <- use_dt %>%
     mutate(group_tmp = as.character(group_tmp)) %>%
     select(all_of(block_col), group_tmp, all_of(value_col)) %>%
     distinct() %>%
     pivot_wider(names_from = group_tmp, values_from = all_of(value_col))
-
+  
   pairs <- combn(group_levels, 2, simplify = FALSE)
-
+  
   out <- map_dfr(pairs, function(pair_now) {
     x <- wide_dt[[pair_now[1]]]
     y <- wide_dt[[pair_now[2]]]
-
+    
     ok <- is.finite(x) & is.finite(y)
     x <- x[ok]
     y <- y[ok]
-
+    
     diffs <- x - y
     keep_nonzero <- is.finite(diffs) & diffs != 0
     x_test <- x[keep_nonzero]
     y_test <- y[keep_nonzero]
     diffs_test <- diffs[keep_nonzero]
     n_pairs <- length(diffs_test)
-
+    
     if (n_pairs < 2) {
       return(tibble(
         contrast = paste(pair_now, collapse = " vs "),
@@ -291,16 +291,16 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
         direction = direction_from_diff(ifelse(length(diffs) == 0, NA_real_, median(diffs, na.rm = TRUE)))
       ))
     }
-
+    
     tmp <- tryCatch(
       wilcox.test(x_test, y_test, paired = TRUE, exact = FALSE),
       error = function(e) NULL
     )
-
+    
     stat <- if (is.null(tmp)) NA_real_ else unname(tmp$statistic)
     total_rank_sum <- n_pairs * (n_pairs + 1) / 2
     rbc <- if (is.na(stat)) NA_real_ else (2 * stat / total_rank_sum) - 1
-
+    
     tibble(
       contrast = paste(pair_now, collapse = " vs "),
       n_pairs = n_pairs,
@@ -312,7 +312,7 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
       direction = direction_from_diff(median(diffs_test, na.rm = TRUE))
     )
   })
-
+  
   out %>%
     mutate(p_adj_holm = p.adjust(p_value, method = "holm"))
 }
@@ -353,7 +353,7 @@ median_iqr_tbl <- function(df, value_col) {
 # ── Plot style ────────────────────────────────────────────────────────────────
 get_plot_style <- function(plot_style = c("bw", "color")) {
   plot_style <- match.arg(plot_style)
-
+  
   if (plot_style == "color") {
     return(list(
       behavior_fill = c(
@@ -375,7 +375,7 @@ get_plot_style <- function(plot_style = c("bw", "color")) {
       heatmap_high = "#08306B"
     ))
   }
-
+  
   list(
     behavior_fill = c(
       "Foraging" = "grey85",
@@ -400,7 +400,7 @@ get_plot_style <- function(plot_style = c("bw", "color")) {
 theme_h2_clean <- function(plot_style = c("bw", "color")) {
   plot_style <- match.arg(plot_style)
   style <- get_plot_style(plot_style)
-
+  
   theme_bw(base_size = 10, base_family = "sans") +
     theme(
       plot.title       = element_blank(),
@@ -427,11 +427,11 @@ build_facet_p_labels <- function(stats_df,
                                  label_col = "p_value",
                                  position = c("top_left", "bottom_right")) {
   position <- match.arg(position)
-
+  
   if (!label_col %in% names(stats_df) || !"model" %in% names(stats_df)) {
     return(tibble())
   }
-
+  
   if (position == "top_left") {
     return(
       stats_df %>%
@@ -445,7 +445,7 @@ build_facet_p_labels <- function(stats_df,
         )
     )
   }
-
+  
   stats_df %>%
     transmute(
       model,
@@ -463,11 +463,11 @@ add_facet_p_labels <- function(plot_obj,
                                show_p_values = TRUE) {
   plot_style <- match.arg(plot_style)
   style <- get_plot_style(plot_style)
-
+  
   if (!isTRUE(show_p_values) || nrow(annot_df) == 0) {
     return(plot_obj)
   }
-
+  
   plot_obj +
     geom_label(
       data = annot_df,
@@ -776,7 +776,35 @@ for (plot_style in plot_styles) {
   style <- get_plot_style(plot_style)
   style_suffix <- ifelse(plot_style == "bw", "bw", "color")
   label_note <- ifelse(show_p_values, "with p-value label", "without p-value label")
-
+  
+  p_h2_main_boxplot <- ggplot(cross_dt_complete, aes(x = behavior, y = f1, fill = behavior)) +
+    geom_boxplot(
+      outlier.shape = NA,
+      width = 0.6,
+      colour = "black",
+      linewidth = 0.6,
+      alpha = 0.95
+    ) +
+    geom_jitter(
+      shape = 21,
+      size = 2.1,
+      stroke = 0.35,
+      width = 0.15,
+      height = 0,
+      colour = "black",
+      alpha = style$point_alpha
+    ) +
+    facet_wrap(~ model, ncol = 2) +
+    scale_fill_manual(values = style$behavior_fill) +
+    scale_y_continuous(
+      limits = c(0, 1.08),
+      breaks = seq(0, 1, 0.2),
+      expand = expansion(mult = c(0.02, 0))
+    ) +
+    labs(y = "Cross-dataset F1 Score") +
+    theme_h2_clean(plot_style)
+  p_h2_main_boxplot <- add_facet_p_labels(p_h2_main_boxplot, cross_annot, plot_style, show_p_values)
+  
   p_h2_main_point <- ggplot(cross_summary_paper, aes(x = behavior, y = median_f1, fill = behavior)) +
     geom_linerange(aes(ymin = q1_f1, ymax = q3_f1), linewidth = 0.7, colour = "black") +
     geom_point(shape = 21, size = 3, colour = "black", stroke = 0.35) +
@@ -790,7 +818,7 @@ for (plot_style in plot_styles) {
     labs(y = "Median F1 Score (IQR)") +
     theme_h2_clean(plot_style)
   p_h2_main_point <- add_facet_p_labels(p_h2_main_point, cross_annot, plot_style, show_p_values)
-
+  
   p_h2_paired_lines <- ggplot(cross_dt_complete, aes(x = behavior, y = f1, group = dataset_id)) +
     geom_line(alpha = 0.45, linewidth = 0.45, colour = style$line_colour) +
     geom_point(size = 1.9, alpha = style$point_alpha, colour = style$point_colour) +
@@ -803,7 +831,7 @@ for (plot_style in plot_styles) {
     labs(y = "Cross-dataset F1 Score") +
     theme_h2_clean(plot_style)
   p_h2_paired_lines <- add_facet_p_labels(p_h2_paired_lines, cross_annot, plot_style, show_p_values)
-
+  
   p_h2_heatmap_appendix <- ggplot(cross_heatmap_dt, aes(x = behavior, y = dataset_label, fill = f1)) +
     geom_tile(colour = "white", linewidth = 0.4) +
     facet_wrap(~ model, ncol = 2, scales = "free_y") +
@@ -820,23 +848,26 @@ for (plot_style in plot_styles) {
       legend.position = "right",
       axis.text.x = element_text(angle = 45, hjust = 1)
     )
-
+  
   plot_files <- c(
-    paste0("01_h2_main_cross_f1_median_iqr_", style_suffix, ".png"),
-    paste0("02_h2_cross_f1_paired_lines_", style_suffix, ".png"),
-    paste0("03_h2_cross_f1_heatmap_appendix_", style_suffix, ".png")
+    paste0("01_h2_main_cross_f1_boxplot_points_", style_suffix, ".png"),
+    paste0("02_h2_cross_f1_median_iqr_", style_suffix, ".png"),
+    paste0("03_h2_cross_f1_paired_lines_", style_suffix, ".png"),
+    paste0("04_h2_cross_f1_heatmap_appendix_", style_suffix, ".png")
   )
-
-  save_plot(p_h2_main_point,       plot_files[1])
-  save_plot(p_h2_paired_lines,     plot_files[2])
-  save_plot(p_h2_heatmap_appendix, plot_files[3], width_mm = 190, height_mm = 150)
-
+  
+  save_plot(p_h2_main_boxplot,     plot_files[1])
+  save_plot(p_h2_main_point,       plot_files[2])
+  save_plot(p_h2_paired_lines,     plot_files[3])
+  save_plot(p_h2_heatmap_appendix, plot_files[4], width_mm = 190, height_mm = 150)
+  
   plot_index <- bind_rows(
     plot_index,
     tibble(
       file = plot_files,
       description = c(
-        paste0("H2 main plot: combined cross-dataset median F1 with IQR by behaviour and model, ", label_note, " (", style_suffix, ")"),
+        paste0("H2 main plot: combined cross-dataset boxplot with points by behaviour and model, ", label_note, " (", style_suffix, ")"),
+        paste0("H2 support plot: combined cross-dataset median F1 with IQR by behaviour and model, ", label_note, " (", style_suffix, ")"),
         paste0("H2 support plot: combined cross-dataset paired lines by behaviour and model, ", label_note, " (", style_suffix, ")"),
         paste0("H2 appendix plot: combined cross-dataset heatmap by behaviour, dataset, and model (", style_suffix, ")")
       )
@@ -884,7 +915,7 @@ report_lines <- c(
   paste0("p_value_position: ", p_value_position),
   "",
   "This report contains the main H2 results, checks, and exported file overview.",
-  "Saved H2 plots: main median/IQR plot, paired-lines plot, and appendix heatmap (each in bw and color).",
+  "Saved H2 plots: main boxplot-with-points, median/IQR support plot, paired-lines support plot, and appendix heatmap (each in bw and color).",
   ""
 )
 
