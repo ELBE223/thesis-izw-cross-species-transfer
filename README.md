@@ -2,7 +2,8 @@
 
 R and Python scripts for my thesis at the Leibniz Institute for Zoo and Wildlife Research (IZW) on cross-species transfer in terrestrial mammal behavior classification using tri-axial accelerometer data.
 
-<img width="239" height="239" alt="image" src="https://github.com/user-attachments/assets/b571eb29-b010-4de4-b79e-93acc17463b1" />
+<img width="1254" height="1254" alt="M A _Animals" src="https://github.com/user-attachments/assets/60189d8f-90ce-4210-9360-bf3efe61177d" />
+
 
 ## Overview
 
@@ -55,9 +56,8 @@ Together, these settings separate within-dataset accuracy from increasingly chal
 
 - `R/` – data preparation, statistical analysis, and visualisation
 - `python/` – modelling and classification scripts
-- `outputs/` – processed results and exported tables
-- `figures/` – plots and visual outputs
-- `images/` – README images
+- `Traits/` – used Trait data for this study
+
 
 ## Data availability
 
