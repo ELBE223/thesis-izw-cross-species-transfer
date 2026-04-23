@@ -30,7 +30,7 @@ To what extent do behaviour classification models trained on accelerometer data 
 
 - **H1 (transfer gap):** Behaviour classification performance will be higher in within-dataset evaluations than in cross-dataset transfer evaluations.
 - **H2 (behaviour-class effect):** Cross-dataset performance differs across broad behavioural classes.
-- **H3 (distance effect):** Cross-species transfer performance declines with increasing biological distance between source and target species.
+- **H3 (distance effect):** Cross-species transfer performance will decline with increasing functional-biomechanical trait distance between source and target species.
 
 ## Models
 
