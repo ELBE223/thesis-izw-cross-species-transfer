@@ -55,7 +55,7 @@ Together, these settings separate within-dataset accuracy from increasingly chal
 ## Repository structure
 
 - `R/` – data preparation, statistical analysis, and visualisation
-- `python/` – modelling and classification scripts
+- `Python/` – modelling and classification scripts
 - `Traits/` – used Trait data for this study
 
 
