@@ -1,0 +1,10 @@
+species	log_bodymass_g	dominant_locomotor_mode	body_configuration_type	expected_trunk_motion_amplitude	directional_change_frequency	head_neck_contribution_to_whole_body_motion	postural_compactness_body_profile_reduction
+Bison bonasus	13.122363377404328	cursorial_grazing	robust_quadruped	moderate	low	high	low
+Bos taurus	13.710150042306449	cursorial_grazing	robust_quadruped	moderate	low	high	low
+Canis lupus familiaris	10.239959789157341	cursorial	standard_quadruped	high	high	moderate	low
+Equus caballus	12.429216196844383	cursorial_grazing	standard_quadruped	high	moderate	moderate	low
+Equus ferus przewalskii	12.429216196844383	cursorial_grazing	standard_quadruped	high	moderate	moderate	low
+Erinaceus europaeus	6.647688373563329	semifossorial	compact_low_profile_body	low	low	low	very_high
+Giraffa camelopardalis	13.710144264511978	cursorial_browsing	tall_long_necked_quadruped	very_high	low	very_high	low
+Procyon lotor	8.617033096506958	scansorial_terrestrial	generalist_quadruped	moderate	high	high	moderate
+Vulpes vulpes	8.608161230484539	cursorial	standard_quadruped	high	high	moderate	low
