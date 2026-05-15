@@ -1,4 +1,6 @@
 # 01_random_forest.py
+# Author : Lucas Beseler
+# Date   : 2026-05-15
 
 from __future__ import annotations
 
