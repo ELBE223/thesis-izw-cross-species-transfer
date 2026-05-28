@@ -55,8 +55,8 @@ This repository includes selected derived supplementary files only. Full reprodu
 
 Publicly available datasets used in this project include:
 
-- Horsing Around -- A Dataset Comprising Horse Movement
-- Japanese Black Beef Cow Behavior Classification Dataset
+- [Horsing Around -- A Dataset Comprising Horse Movement](https://doi.org/10.4121/uuid:2e08745c-4178-4183-8551-f248c992cb14)
+- [Japanese Black Beef Cow Behavior Classification Dataset](https://doi.org/10.5281/zenodo.5399258)
 
 ## Reproducibility
 
