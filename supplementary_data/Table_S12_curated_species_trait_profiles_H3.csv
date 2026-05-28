@@ -1,0 +1,10 @@
+species,log_bodymass_g,dominant_locomotor_mode,body_configuration_type,expected_trunk_motion_amplitude,directional_change_frequency,head_neck_contribution_to_whole_body_motion,postural_compactness_body_profile_reduction,activity_pattern,vertical_use_motion_scope,defensive_posture_specialisation
+Bison bonasus,13.122363377404328,cursorial_grazing,robust_quadruped,moderate,low,high,low,diurnal,low_terrestrial_grazing,low
+Bos taurus,13.710150042306449,cursorial_grazing,robust_quadruped,moderate,low,high,low,diurnal,low_terrestrial_grazing,low
+Canis lupus familiaris,10.23995978915734,cursorial,standard_quadruped,high,high,moderate,low,flexible,ground_level,low
+Equus caballus,12.429216196844385,cursorial_grazing,standard_quadruped,high,moderate,moderate,low,diurnal,low_terrestrial_grazing,low
+Equus ferus przewalskii,12.429216196844385,cursorial_grazing,standard_quadruped,high,moderate,moderate,low,diurnal,low_terrestrial_grazing,low
+Erinaceus europaeus,6.647688373563329,semifossorial,compact_low_profile_body,low,low,low,very_high,nocturnal,ground_cover,very_high
+Giraffa camelopardalis,13.710144264511978,cursorial_browsing,tall_long_necked_quadruped,very_high,low,very_high,low,diurnal,high_browse,low
+Procyon lotor,8.617033096506958,scansorial_terrestrial,generalist_quadruped,moderate,high,high,moderate,nocturnal,ground_tree_mixed,low
+Vulpes vulpes,8.608161230484539,cursorial,standard_quadruped,high,high,moderate,low,nocturnal_crepuscular,ground_level,low

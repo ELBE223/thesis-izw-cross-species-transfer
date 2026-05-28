@@ -1,0 +1,451 @@
+source_species,target_species,model,mean_macro_f1,n_dataset_pairs,core_gower_distance,extended_gower_distance,same_species,same_species_excluded_from_primary_H3
+Bison bonasus,Bos taurus,CNN,0.451198,1,0.01189,0.008323,FALSE,no
+Bison bonasus,Canis lupus familiaris,CNN,0.334009,2,0.582114,0.60748,FALSE,no
+Bison bonasus,Equus caballus,CNN,0.258403,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Equus ferus przewalskii,CNN,0.815998,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Erinaceus europaeus,CNN,0.288956,1,0.702396,0.791677,FALSE,no
+Bison bonasus,Giraffa camelopardalis,CNN,0.181236,1,0.440461,0.408323,FALSE,no
+Bison bonasus,Procyon lotor,CNN,0.586849,2,0.567323,0.597126,FALSE,no
+Bison bonasus,Vulpes vulpes,CNN,0.392139,2,0.615121,0.630585,FALSE,no
+Bos taurus,Bison bonasus,CNN,0.323976,1,0.01189,0.008323,FALSE,no
+Bos taurus,Canis lupus familiaris,CNN,0.296291,2,0.594003,0.615802,FALSE,no
+Bos taurus,Equus caballus,CNN,0.145849,1,0.335434,0.234804,FALSE,no
+Bos taurus,Equus ferus przewalskii,CNN,0.311433,1,0.335434,0.234804,FALSE,no
+Bos taurus,Erinaceus europaeus,CNN,0.207092,1,0.714286,0.8,FALSE,no
+Bos taurus,Giraffa camelopardalis,CNN,0.29626,1,0.428572,0.4,FALSE,no
+Bos taurus,Procyon lotor,CNN,0.440129,2,0.579212,0.605449,FALSE,no
+Bos taurus,Vulpes vulpes,CNN,0.300089,2,0.627011,0.638908,FALSE,no
+Canis lupus familiaris,Bison bonasus,CNN,0.368415,2,0.582114,0.60748,FALSE,no
+Canis lupus familiaris,Bos taurus,CNN,0.440681,2,0.594003,0.615802,FALSE,no
+Canis lupus familiaris,Canis lupus familiaris,CNN,0.435771,2,0,0,TRUE,yes
+Canis lupus familiaris,Equus caballus,CNN,0.509127,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Equus ferus przewalskii,CNN,0.407882,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Erinaceus europaeus,CNN,0.407483,2,0.786949,0.850864,FALSE,no
+Canis lupus familiaris,Giraffa camelopardalis,CNN,0.182781,2,0.641622,0.649136,FALSE,no
+Canis lupus familiaris,Procyon lotor,CNN,0.476212,4,0.461399,0.52298,FALSE,no
+Canis lupus familiaris,Vulpes vulpes,CNN,0.440805,4,0.033007,0.123105,FALSE,no
+Equus caballus,Bison bonasus,CNN,0.269705,1,0.323545,0.226481,FALSE,no
+Equus caballus,Bos taurus,CNN,0.108861,1,0.335434,0.234804,FALSE,no
+Equus caballus,Canis lupus familiaris,CNN,0.589307,2,0.258569,0.380998,FALSE,no
+Equus caballus,Equus ferus przewalskii,CNN,0.293232,1,0,0,FALSE,no
+Equus caballus,Erinaceus europaeus,CNN,0.092932,1,0.759804,0.831863,FALSE,no
+Equus caballus,Giraffa camelopardalis,CNN,0.19664,1,0.52591,0.468137,FALSE,no
+Equus caballus,Procyon lotor,CNN,0.556094,2,0.577112,0.603978,FALSE,no
+Equus caballus,Vulpes vulpes,CNN,0.630168,2,0.291577,0.404104,FALSE,no
+Equus ferus przewalskii,Bison bonasus,CNN,0.744917,1,0.323545,0.226481,FALSE,no
+Equus ferus przewalskii,Bos taurus,CNN,0.491836,1,0.335434,0.234804,FALSE,no
+Equus ferus przewalskii,Canis lupus familiaris,CNN,0.318537,2,0.258569,0.380998,FALSE,no
+Equus ferus przewalskii,Equus caballus,CNN,0.204281,1,0,0,FALSE,no
+Equus ferus przewalskii,Erinaceus europaeus,CNN,0.089554,1,0.759804,0.831863,FALSE,no
+Equus ferus przewalskii,Giraffa camelopardalis,CNN,0.198032,1,0.52591,0.468137,FALSE,no
+Equus ferus przewalskii,Procyon lotor,CNN,0.450966,2,0.577112,0.603978,FALSE,no
+Equus ferus przewalskii,Vulpes vulpes,CNN,0.521691,2,0.291577,0.404104,FALSE,no
+Erinaceus europaeus,Bison bonasus,CNN,0.449775,1,0.702396,0.791677,FALSE,no
+Erinaceus europaeus,Bos taurus,CNN,0.310397,1,0.714286,0.8,FALSE,no
+Erinaceus europaeus,Canis lupus familiaris,CNN,0.37465,2,0.786949,0.850864,FALSE,no
+Erinaceus europaeus,Equus caballus,CNN,0.39587,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Equus ferus przewalskii,CNN,0.334494,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Giraffa camelopardalis,CNN,0.180308,1,0.857143,0.9,FALSE,no
+Erinaceus europaeus,Procyon lotor,CNN,0.409575,2,0.706502,0.694551,FALSE,no
+Erinaceus europaeus,Vulpes vulpes,CNN,0.279939,2,0.753942,0.827759,FALSE,no
+Giraffa camelopardalis,Bison bonasus,CNN,0.105664,1,0.440461,0.408323,FALSE,no
+Giraffa camelopardalis,Bos taurus,CNN,0.180738,1,0.428572,0.4,FALSE,no
+Giraffa camelopardalis,Canis lupus familiaris,CNN,0.283546,2,0.641622,0.649136,FALSE,no
+Giraffa camelopardalis,Equus caballus,CNN,0.174961,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Equus ferus przewalskii,CNN,0.688854,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Erinaceus europaeus,CNN,0.205882,1,0.857143,0.9,FALSE,no
+Giraffa camelopardalis,Procyon lotor,CNN,0.270614,2,0.722069,0.705449,FALSE,no
+Giraffa camelopardalis,Vulpes vulpes,CNN,0.374037,2,0.67463,0.672241,FALSE,no
+Procyon lotor,Bison bonasus,CNN,0.407661,2,0.567323,0.597126,FALSE,no
+Procyon lotor,Bos taurus,CNN,0.371961,2,0.579212,0.605449,FALSE,no
+Procyon lotor,Canis lupus familiaris,CNN,0.374142,4,0.461399,0.52298,FALSE,no
+Procyon lotor,Equus caballus,CNN,0.515358,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Equus ferus przewalskii,CNN,0.517537,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Erinaceus europaeus,CNN,0.429276,2,0.706502,0.694551,FALSE,no
+Procyon lotor,Giraffa camelopardalis,CNN,0.24845,2,0.722069,0.705449,FALSE,no
+Procyon lotor,Procyon lotor,CNN,0.537289,2,0,0,TRUE,yes
+Procyon lotor,Vulpes vulpes,CNN,0.598501,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Bison bonasus,CNN,0.480391,2,0.615121,0.630585,FALSE,no
+Vulpes vulpes,Bos taurus,CNN,0.549624,2,0.627011,0.638908,FALSE,no
+Vulpes vulpes,Canis lupus familiaris,CNN,0.287952,4,0.033007,0.123105,FALSE,no
+Vulpes vulpes,Equus caballus,CNN,0.202758,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Equus ferus przewalskii,CNN,0.407105,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Erinaceus europaeus,CNN,0.40036,2,0.753942,0.827759,FALSE,no
+Vulpes vulpes,Giraffa camelopardalis,CNN,0.2184,2,0.67463,0.672241,FALSE,no
+Vulpes vulpes,Procyon lotor,CNN,0.549963,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Vulpes vulpes,CNN,0.676942,2,0,0,TRUE,yes
+Bison bonasus,Bos taurus,HYDRA,0.52747,1,0.01189,0.008323,FALSE,no
+Bison bonasus,Canis lupus familiaris,HYDRA,0.384623,2,0.582114,0.60748,FALSE,no
+Bison bonasus,Equus caballus,HYDRA,0.325751,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Equus ferus przewalskii,HYDRA,0.904676,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Erinaceus europaeus,HYDRA,0.36273300000000003,1,0.702396,0.791677,FALSE,no
+Bison bonasus,Giraffa camelopardalis,HYDRA,0.201356,1,0.440461,0.408323,FALSE,no
+Bison bonasus,Procyon lotor,HYDRA,0.429743,2,0.567323,0.597126,FALSE,no
+Bison bonasus,Vulpes vulpes,HYDRA,0.411912,2,0.615121,0.630585,FALSE,no
+Bos taurus,Bison bonasus,HYDRA,0.550378,1,0.01189,0.008323,FALSE,no
+Bos taurus,Canis lupus familiaris,HYDRA,0.337878,2,0.594003,0.615802,FALSE,no
+Bos taurus,Equus caballus,HYDRA,0.243722,1,0.335434,0.234804,FALSE,no
+Bos taurus,Equus ferus przewalskii,HYDRA,0.626314,1,0.335434,0.234804,FALSE,no
+Bos taurus,Erinaceus europaeus,HYDRA,0.485682,1,0.714286,0.8,FALSE,no
+Bos taurus,Giraffa camelopardalis,HYDRA,0.348992,1,0.428572,0.4,FALSE,no
+Bos taurus,Procyon lotor,HYDRA,0.315887,2,0.579212,0.605449,FALSE,no
+Bos taurus,Vulpes vulpes,HYDRA,0.330545,2,0.627011,0.638908,FALSE,no
+Canis lupus familiaris,Bison bonasus,HYDRA,0.400703,2,0.582114,0.60748,FALSE,no
+Canis lupus familiaris,Bos taurus,HYDRA,0.309433,2,0.594003,0.615802,FALSE,no
+Canis lupus familiaris,Canis lupus familiaris,HYDRA,0.575442,2,0,0,TRUE,yes
+Canis lupus familiaris,Equus caballus,HYDRA,0.645376,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Equus ferus przewalskii,HYDRA,0.497778,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Erinaceus europaeus,HYDRA,0.277484,2,0.786949,0.850864,FALSE,no
+Canis lupus familiaris,Giraffa camelopardalis,HYDRA,0.372384,2,0.641622,0.649136,FALSE,no
+Canis lupus familiaris,Procyon lotor,HYDRA,0.535435,4,0.461399,0.52298,FALSE,no
+Canis lupus familiaris,Vulpes vulpes,HYDRA,0.510247,4,0.033007,0.123105,FALSE,no
+Equus caballus,Bison bonasus,HYDRA,0.219402,1,0.323545,0.226481,FALSE,no
+Equus caballus,Bos taurus,HYDRA,0.198376,1,0.335434,0.234804,FALSE,no
+Equus caballus,Canis lupus familiaris,HYDRA,0.538569,2,0.258569,0.380998,FALSE,no
+Equus caballus,Equus ferus przewalskii,HYDRA,0.36066,1,0,0,FALSE,no
+Equus caballus,Erinaceus europaeus,HYDRA,0.3142,1,0.759804,0.831863,FALSE,no
+Equus caballus,Giraffa camelopardalis,HYDRA,0.219555,1,0.52591,0.468137,FALSE,no
+Equus caballus,Procyon lotor,HYDRA,0.515432,2,0.577112,0.603978,FALSE,no
+Equus caballus,Vulpes vulpes,HYDRA,0.531397,2,0.291577,0.404104,FALSE,no
+Equus ferus przewalskii,Bison bonasus,HYDRA,0.913869,1,0.323545,0.226481,FALSE,no
+Equus ferus przewalskii,Bos taurus,HYDRA,0.544534,1,0.335434,0.234804,FALSE,no
+Equus ferus przewalskii,Canis lupus familiaris,HYDRA,0.484587,2,0.258569,0.380998,FALSE,no
+Equus ferus przewalskii,Equus caballus,HYDRA,0.454215,1,0,0,FALSE,no
+Equus ferus przewalskii,Erinaceus europaeus,HYDRA,0.435094,1,0.759804,0.831863,FALSE,no
+Equus ferus przewalskii,Giraffa camelopardalis,HYDRA,0.235245,1,0.52591,0.468137,FALSE,no
+Equus ferus przewalskii,Procyon lotor,HYDRA,0.535695,2,0.577112,0.603978,FALSE,no
+Equus ferus przewalskii,Vulpes vulpes,HYDRA,0.623656,2,0.291577,0.404104,FALSE,no
+Erinaceus europaeus,Bison bonasus,HYDRA,0.487046,1,0.702396,0.791677,FALSE,no
+Erinaceus europaeus,Bos taurus,HYDRA,0.555378,1,0.714286,0.8,FALSE,no
+Erinaceus europaeus,Canis lupus familiaris,HYDRA,0.464987,2,0.786949,0.850864,FALSE,no
+Erinaceus europaeus,Equus caballus,HYDRA,0.517501,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Equus ferus przewalskii,HYDRA,0.366109,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Giraffa camelopardalis,HYDRA,0.236426,1,0.857143,0.9,FALSE,no
+Erinaceus europaeus,Procyon lotor,HYDRA,0.580919,2,0.706502,0.694551,FALSE,no
+Erinaceus europaeus,Vulpes vulpes,HYDRA,0.426919,2,0.753942,0.827759,FALSE,no
+Giraffa camelopardalis,Bison bonasus,HYDRA,0.319556,1,0.440461,0.408323,FALSE,no
+Giraffa camelopardalis,Bos taurus,HYDRA,0.114435,1,0.428572,0.4,FALSE,no
+Giraffa camelopardalis,Canis lupus familiaris,HYDRA,0.228743,2,0.641622,0.649136,FALSE,no
+Giraffa camelopardalis,Equus caballus,HYDRA,0.44704700000000003,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Equus ferus przewalskii,HYDRA,0.507521,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Erinaceus europaeus,HYDRA,0.472231,1,0.857143,0.9,FALSE,no
+Giraffa camelopardalis,Procyon lotor,HYDRA,0.595374,2,0.722069,0.705449,FALSE,no
+Giraffa camelopardalis,Vulpes vulpes,HYDRA,0.63085,2,0.67463,0.672241,FALSE,no
+Procyon lotor,Bison bonasus,HYDRA,0.549818,2,0.567323,0.597126,FALSE,no
+Procyon lotor,Bos taurus,HYDRA,0.402128,2,0.579212,0.605449,FALSE,no
+Procyon lotor,Canis lupus familiaris,HYDRA,0.45708,4,0.461399,0.52298,FALSE,no
+Procyon lotor,Equus caballus,HYDRA,0.558344,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Equus ferus przewalskii,HYDRA,0.524208,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Erinaceus europaeus,HYDRA,0.423192,2,0.706502,0.694551,FALSE,no
+Procyon lotor,Giraffa camelopardalis,HYDRA,0.374553,2,0.722069,0.705449,FALSE,no
+Procyon lotor,Procyon lotor,HYDRA,0.572819,2,0,0,TRUE,yes
+Procyon lotor,Vulpes vulpes,HYDRA,0.619334,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Bison bonasus,HYDRA,0.455073,2,0.615121,0.630585,FALSE,no
+Vulpes vulpes,Bos taurus,HYDRA,0.488986,2,0.627011,0.638908,FALSE,no
+Vulpes vulpes,Canis lupus familiaris,HYDRA,0.521171,4,0.033007,0.123105,FALSE,no
+Vulpes vulpes,Equus caballus,HYDRA,0.435935,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Equus ferus przewalskii,HYDRA,0.462054,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Erinaceus europaeus,HYDRA,0.428677,2,0.753942,0.827759,FALSE,no
+Vulpes vulpes,Giraffa camelopardalis,HYDRA,0.405757,2,0.67463,0.672241,FALSE,no
+Vulpes vulpes,Procyon lotor,HYDRA,0.591542,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Vulpes vulpes,HYDRA,0.798551,2,0,0,TRUE,yes
+Bison bonasus,Bos taurus,LGBM,0.492615,1,0.01189,0.008323,FALSE,no
+Bison bonasus,Canis lupus familiaris,LGBM,0.518468,2,0.582114,0.60748,FALSE,no
+Bison bonasus,Equus caballus,LGBM,0.695084,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Equus ferus przewalskii,LGBM,0.893847,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Erinaceus europaeus,LGBM,0.50516,1,0.702396,0.791677,FALSE,no
+Bison bonasus,Giraffa camelopardalis,LGBM,0.441805,1,0.440461,0.408323,FALSE,no
+Bison bonasus,Procyon lotor,LGBM,0.717251,2,0.567323,0.597126,FALSE,no
+Bison bonasus,Vulpes vulpes,LGBM,0.751236,2,0.615121,0.630585,FALSE,no
+Bos taurus,Bison bonasus,LGBM,0.567203,1,0.01189,0.008323,FALSE,no
+Bos taurus,Canis lupus familiaris,LGBM,0.502476,2,0.594003,0.615802,FALSE,no
+Bos taurus,Equus caballus,LGBM,0.654981,1,0.335434,0.234804,FALSE,no
+Bos taurus,Equus ferus przewalskii,LGBM,0.774542,1,0.335434,0.234804,FALSE,no
+Bos taurus,Erinaceus europaeus,LGBM,0.52055,1,0.714286,0.8,FALSE,no
+Bos taurus,Giraffa camelopardalis,LGBM,0.52845,1,0.428572,0.4,FALSE,no
+Bos taurus,Procyon lotor,LGBM,0.676298,2,0.579212,0.605449,FALSE,no
+Bos taurus,Vulpes vulpes,LGBM,0.707923,2,0.627011,0.638908,FALSE,no
+Canis lupus familiaris,Bison bonasus,LGBM,0.49796,2,0.582114,0.60748,FALSE,no
+Canis lupus familiaris,Bos taurus,LGBM,0.451624,2,0.594003,0.615802,FALSE,no
+Canis lupus familiaris,Canis lupus familiaris,LGBM,0.632229,2,0,0,TRUE,yes
+Canis lupus familiaris,Equus caballus,LGBM,0.845521,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Equus ferus przewalskii,LGBM,0.649279,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Erinaceus europaeus,LGBM,0.351459,2,0.786949,0.850864,FALSE,no
+Canis lupus familiaris,Giraffa camelopardalis,LGBM,0.374958,2,0.641622,0.649136,FALSE,no
+Canis lupus familiaris,Procyon lotor,LGBM,0.655224,4,0.461399,0.52298,FALSE,no
+Canis lupus familiaris,Vulpes vulpes,LGBM,0.619595,4,0.033007,0.123105,FALSE,no
+Equus caballus,Bison bonasus,LGBM,0.444795,1,0.323545,0.226481,FALSE,no
+Equus caballus,Bos taurus,LGBM,0.498226,1,0.335434,0.234804,FALSE,no
+Equus caballus,Canis lupus familiaris,LGBM,0.658943,2,0.258569,0.380998,FALSE,no
+Equus caballus,Equus ferus przewalskii,LGBM,0.543436,1,0,0,FALSE,no
+Equus caballus,Erinaceus europaeus,LGBM,0.409835,1,0.759804,0.831863,FALSE,no
+Equus caballus,Giraffa camelopardalis,LGBM,0.34368,1,0.52591,0.468137,FALSE,no
+Equus caballus,Procyon lotor,LGBM,0.715432,2,0.577112,0.603978,FALSE,no
+Equus caballus,Vulpes vulpes,LGBM,0.679031,2,0.291577,0.404104,FALSE,no
+Equus ferus przewalskii,Bison bonasus,LGBM,0.850984,1,0.323545,0.226481,FALSE,no
+Equus ferus przewalskii,Bos taurus,LGBM,0.566027,1,0.335434,0.234804,FALSE,no
+Equus ferus przewalskii,Canis lupus familiaris,LGBM,0.595226,2,0.258569,0.380998,FALSE,no
+Equus ferus przewalskii,Equus caballus,LGBM,0.753914,1,0,0,FALSE,no
+Equus ferus przewalskii,Erinaceus europaeus,LGBM,0.511144,1,0.759804,0.831863,FALSE,no
+Equus ferus przewalskii,Giraffa camelopardalis,LGBM,0.535644,1,0.52591,0.468137,FALSE,no
+Equus ferus przewalskii,Procyon lotor,LGBM,0.719282,2,0.577112,0.603978,FALSE,no
+Equus ferus przewalskii,Vulpes vulpes,LGBM,0.742604,2,0.291577,0.404104,FALSE,no
+Erinaceus europaeus,Bison bonasus,LGBM,0.510248,1,0.702396,0.791677,FALSE,no
+Erinaceus europaeus,Bos taurus,LGBM,0.506783,1,0.714286,0.8,FALSE,no
+Erinaceus europaeus,Canis lupus familiaris,LGBM,0.394152,2,0.786949,0.850864,FALSE,no
+Erinaceus europaeus,Equus caballus,LGBM,0.465519,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Equus ferus przewalskii,LGBM,0.573525,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Giraffa camelopardalis,LGBM,0.467502,1,0.857143,0.9,FALSE,no
+Erinaceus europaeus,Procyon lotor,LGBM,0.558193,2,0.706502,0.694551,FALSE,no
+Erinaceus europaeus,Vulpes vulpes,LGBM,0.510184,2,0.753942,0.827759,FALSE,no
+Giraffa camelopardalis,Bison bonasus,LGBM,0.635652,1,0.440461,0.408323,FALSE,no
+Giraffa camelopardalis,Bos taurus,LGBM,0.59063,1,0.428572,0.4,FALSE,no
+Giraffa camelopardalis,Canis lupus familiaris,LGBM,0.499558,2,0.641622,0.649136,FALSE,no
+Giraffa camelopardalis,Equus caballus,LGBM,0.612453,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Equus ferus przewalskii,LGBM,0.767137,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Erinaceus europaeus,LGBM,0.451998,1,0.857143,0.9,FALSE,no
+Giraffa camelopardalis,Procyon lotor,LGBM,0.640675,2,0.722069,0.705449,FALSE,no
+Giraffa camelopardalis,Vulpes vulpes,LGBM,0.705563,2,0.67463,0.672241,FALSE,no
+Procyon lotor,Bison bonasus,LGBM,0.655206,2,0.567323,0.597126,FALSE,no
+Procyon lotor,Bos taurus,LGBM,0.555119,2,0.579212,0.605449,FALSE,no
+Procyon lotor,Canis lupus familiaris,LGBM,0.65049,4,0.461399,0.52298,FALSE,no
+Procyon lotor,Equus caballus,LGBM,0.857792,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Equus ferus przewalskii,LGBM,0.724414,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Erinaceus europaeus,LGBM,0.49031,2,0.706502,0.694551,FALSE,no
+Procyon lotor,Giraffa camelopardalis,LGBM,0.507235,2,0.722069,0.705449,FALSE,no
+Procyon lotor,Procyon lotor,LGBM,0.678373,2,0,0,TRUE,yes
+Procyon lotor,Vulpes vulpes,LGBM,0.692411,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Bison bonasus,LGBM,0.599884,2,0.615121,0.630585,FALSE,no
+Vulpes vulpes,Bos taurus,LGBM,0.495389,2,0.627011,0.638908,FALSE,no
+Vulpes vulpes,Canis lupus familiaris,LGBM,0.51738,4,0.033007,0.123105,FALSE,no
+Vulpes vulpes,Equus caballus,LGBM,0.615706,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Equus ferus przewalskii,LGBM,0.758669,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Erinaceus europaeus,LGBM,0.487816,2,0.753942,0.827759,FALSE,no
+Vulpes vulpes,Giraffa camelopardalis,LGBM,0.510601,2,0.67463,0.672241,FALSE,no
+Vulpes vulpes,Procyon lotor,LGBM,0.626745,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Vulpes vulpes,LGBM,0.726812,2,0,0,TRUE,yes
+Bison bonasus,Bos taurus,MultiRocket,0.535769,1,0.01189,0.008323,FALSE,no
+Bison bonasus,Canis lupus familiaris,MultiRocket,0.539353,2,0.582114,0.60748,FALSE,no
+Bison bonasus,Equus caballus,MultiRocket,0.607417,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Equus ferus przewalskii,MultiRocket,0.950159,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Erinaceus europaeus,MultiRocket,0.5109,1,0.702396,0.791677,FALSE,no
+Bison bonasus,Giraffa camelopardalis,MultiRocket,0.211683,1,0.440461,0.408323,FALSE,no
+Bison bonasus,Procyon lotor,MultiRocket,0.665939,2,0.567323,0.597126,FALSE,no
+Bison bonasus,Vulpes vulpes,MultiRocket,0.651165,2,0.615121,0.630585,FALSE,no
+Bos taurus,Bison bonasus,MultiRocket,0.524407,1,0.01189,0.008323,FALSE,no
+Bos taurus,Canis lupus familiaris,MultiRocket,0.336534,2,0.594003,0.615802,FALSE,no
+Bos taurus,Equus caballus,MultiRocket,0.412614,1,0.335434,0.234804,FALSE,no
+Bos taurus,Equus ferus przewalskii,MultiRocket,0.582408,1,0.335434,0.234804,FALSE,no
+Bos taurus,Erinaceus europaeus,MultiRocket,0.457985,1,0.714286,0.8,FALSE,no
+Bos taurus,Giraffa camelopardalis,MultiRocket,0.664317,1,0.428572,0.4,FALSE,no
+Bos taurus,Procyon lotor,MultiRocket,0.520702,2,0.579212,0.605449,FALSE,no
+Bos taurus,Vulpes vulpes,MultiRocket,0.537335,2,0.627011,0.638908,FALSE,no
+Canis lupus familiaris,Bison bonasus,MultiRocket,0.442181,2,0.582114,0.60748,FALSE,no
+Canis lupus familiaris,Bos taurus,MultiRocket,0.347696,2,0.594003,0.615802,FALSE,no
+Canis lupus familiaris,Canis lupus familiaris,MultiRocket,0.658243,2,0,0,TRUE,yes
+Canis lupus familiaris,Equus caballus,MultiRocket,0.72171,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Equus ferus przewalskii,MultiRocket,0.541557,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Erinaceus europaeus,MultiRocket,0.415627,2,0.786949,0.850864,FALSE,no
+Canis lupus familiaris,Giraffa camelopardalis,MultiRocket,0.382295,2,0.641622,0.649136,FALSE,no
+Canis lupus familiaris,Procyon lotor,MultiRocket,0.61593,4,0.461399,0.52298,FALSE,no
+Canis lupus familiaris,Vulpes vulpes,MultiRocket,0.621309,4,0.033007,0.123105,FALSE,no
+Equus caballus,Bison bonasus,MultiRocket,0.427171,1,0.323545,0.226481,FALSE,no
+Equus caballus,Bos taurus,MultiRocket,0.406503,1,0.335434,0.234804,FALSE,no
+Equus caballus,Canis lupus familiaris,MultiRocket,0.654144,2,0.258569,0.380998,FALSE,no
+Equus caballus,Equus ferus przewalskii,MultiRocket,0.482486,1,0,0,FALSE,no
+Equus caballus,Erinaceus europaeus,MultiRocket,0.370398,1,0.759804,0.831863,FALSE,no
+Equus caballus,Giraffa camelopardalis,MultiRocket,0.215182,1,0.52591,0.468137,FALSE,no
+Equus caballus,Procyon lotor,MultiRocket,0.678556,2,0.577112,0.603978,FALSE,no
+Equus caballus,Vulpes vulpes,MultiRocket,0.625383,2,0.291577,0.404104,FALSE,no
+Equus ferus przewalskii,Bison bonasus,MultiRocket,0.902673,1,0.323545,0.226481,FALSE,no
+Equus ferus przewalskii,Bos taurus,MultiRocket,0.560668,1,0.335434,0.234804,FALSE,no
+Equus ferus przewalskii,Canis lupus familiaris,MultiRocket,0.608766,2,0.258569,0.380998,FALSE,no
+Equus ferus przewalskii,Equus caballus,MultiRocket,0.662212,1,0,0,FALSE,no
+Equus ferus przewalskii,Erinaceus europaeus,MultiRocket,0.466476,1,0.759804,0.831863,FALSE,no
+Equus ferus przewalskii,Giraffa camelopardalis,MultiRocket,0.362121,1,0.52591,0.468137,FALSE,no
+Equus ferus przewalskii,Procyon lotor,MultiRocket,0.699932,2,0.577112,0.603978,FALSE,no
+Equus ferus przewalskii,Vulpes vulpes,MultiRocket,0.709598,2,0.291577,0.404104,FALSE,no
+Erinaceus europaeus,Bison bonasus,MultiRocket,0.651857,1,0.702396,0.791677,FALSE,no
+Erinaceus europaeus,Bos taurus,MultiRocket,0.421959,1,0.714286,0.8,FALSE,no
+Erinaceus europaeus,Canis lupus familiaris,MultiRocket,0.428825,2,0.786949,0.850864,FALSE,no
+Erinaceus europaeus,Equus caballus,MultiRocket,0.451427,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Equus ferus przewalskii,MultiRocket,0.554854,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Giraffa camelopardalis,MultiRocket,0.534035,1,0.857143,0.9,FALSE,no
+Erinaceus europaeus,Procyon lotor,MultiRocket,0.468742,2,0.706502,0.694551,FALSE,no
+Erinaceus europaeus,Vulpes vulpes,MultiRocket,0.320834,2,0.753942,0.827759,FALSE,no
+Giraffa camelopardalis,Bison bonasus,MultiRocket,0.355327,1,0.440461,0.408323,FALSE,no
+Giraffa camelopardalis,Bos taurus,MultiRocket,0.067712,1,0.428572,0.4,FALSE,no
+Giraffa camelopardalis,Canis lupus familiaris,MultiRocket,0.150943,2,0.641622,0.649136,FALSE,no
+Giraffa camelopardalis,Equus caballus,MultiRocket,0.161536,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Equus ferus przewalskii,MultiRocket,0.355363,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Erinaceus europaeus,MultiRocket,0.164616,1,0.857143,0.9,FALSE,no
+Giraffa camelopardalis,Procyon lotor,MultiRocket,0.295651,2,0.722069,0.705449,FALSE,no
+Giraffa camelopardalis,Vulpes vulpes,MultiRocket,0.359667,2,0.67463,0.672241,FALSE,no
+Procyon lotor,Bison bonasus,MultiRocket,0.657952,2,0.567323,0.597126,FALSE,no
+Procyon lotor,Bos taurus,MultiRocket,0.521354,2,0.579212,0.605449,FALSE,no
+Procyon lotor,Canis lupus familiaris,MultiRocket,0.607963,4,0.461399,0.52298,FALSE,no
+Procyon lotor,Equus caballus,MultiRocket,0.801503,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Equus ferus przewalskii,MultiRocket,0.690044,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Erinaceus europaeus,MultiRocket,0.447454,2,0.706502,0.694551,FALSE,no
+Procyon lotor,Giraffa camelopardalis,MultiRocket,0.412858,2,0.722069,0.705449,FALSE,no
+Procyon lotor,Procyon lotor,MultiRocket,0.636618,2,0,0,TRUE,yes
+Procyon lotor,Vulpes vulpes,MultiRocket,0.678734,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Bison bonasus,MultiRocket,0.657389,2,0.615121,0.630585,FALSE,no
+Vulpes vulpes,Bos taurus,MultiRocket,0.461643,2,0.627011,0.638908,FALSE,no
+Vulpes vulpes,Canis lupus familiaris,MultiRocket,0.554762,4,0.033007,0.123105,FALSE,no
+Vulpes vulpes,Equus caballus,MultiRocket,0.526664,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Equus ferus przewalskii,MultiRocket,0.66371,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Erinaceus europaeus,MultiRocket,0.396907,2,0.753942,0.827759,FALSE,no
+Vulpes vulpes,Giraffa camelopardalis,MultiRocket,0.571523,2,0.67463,0.672241,FALSE,no
+Vulpes vulpes,Procyon lotor,MultiRocket,0.636466,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Vulpes vulpes,MultiRocket,0.706514,2,0,0,TRUE,yes
+Bison bonasus,Bos taurus,RF,0.525277,1,0.01189,0.008323,FALSE,no
+Bison bonasus,Canis lupus familiaris,RF,0.498904,2,0.582114,0.60748,FALSE,no
+Bison bonasus,Equus caballus,RF,0.601944,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Equus ferus przewalskii,RF,0.917501,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Erinaceus europaeus,RF,0.516695,1,0.702396,0.791677,FALSE,no
+Bison bonasus,Giraffa camelopardalis,RF,0.397861,1,0.440461,0.408323,FALSE,no
+Bison bonasus,Procyon lotor,RF,0.685556,2,0.567323,0.597126,FALSE,no
+Bison bonasus,Vulpes vulpes,RF,0.754928,2,0.615121,0.630585,FALSE,no
+Bos taurus,Bison bonasus,RF,0.593551,1,0.01189,0.008323,FALSE,no
+Bos taurus,Canis lupus familiaris,RF,0.497245,2,0.594003,0.615802,FALSE,no
+Bos taurus,Equus caballus,RF,0.648842,1,0.335434,0.234804,FALSE,no
+Bos taurus,Equus ferus przewalskii,RF,0.735465,1,0.335434,0.234804,FALSE,no
+Bos taurus,Erinaceus europaeus,RF,0.534128,1,0.714286,0.8,FALSE,no
+Bos taurus,Giraffa camelopardalis,RF,0.495176,1,0.428572,0.4,FALSE,no
+Bos taurus,Procyon lotor,RF,0.693241,2,0.579212,0.605449,FALSE,no
+Bos taurus,Vulpes vulpes,RF,0.687105,2,0.627011,0.638908,FALSE,no
+Canis lupus familiaris,Bison bonasus,RF,0.494845,2,0.582114,0.60748,FALSE,no
+Canis lupus familiaris,Bos taurus,RF,0.464027,2,0.594003,0.615802,FALSE,no
+Canis lupus familiaris,Canis lupus familiaris,RF,0.644152,2,0,0,TRUE,yes
+Canis lupus familiaris,Equus caballus,RF,0.874501,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Equus ferus przewalskii,RF,0.6589,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Erinaceus europaeus,RF,0.344843,2,0.786949,0.850864,FALSE,no
+Canis lupus familiaris,Giraffa camelopardalis,RF,0.362939,2,0.641622,0.649136,FALSE,no
+Canis lupus familiaris,Procyon lotor,RF,0.670294,4,0.461399,0.52298,FALSE,no
+Canis lupus familiaris,Vulpes vulpes,RF,0.627849,4,0.033007,0.123105,FALSE,no
+Equus caballus,Bison bonasus,RF,0.45149,1,0.323545,0.226481,FALSE,no
+Equus caballus,Bos taurus,RF,0.504038,1,0.335434,0.234804,FALSE,no
+Equus caballus,Canis lupus familiaris,RF,0.649493,2,0.258569,0.380998,FALSE,no
+Equus caballus,Equus ferus przewalskii,RF,0.535571,1,0,0,FALSE,no
+Equus caballus,Erinaceus europaeus,RF,0.401518,1,0.759804,0.831863,FALSE,no
+Equus caballus,Giraffa camelopardalis,RF,0.285772,1,0.52591,0.468137,FALSE,no
+Equus caballus,Procyon lotor,RF,0.687462,2,0.577112,0.603978,FALSE,no
+Equus caballus,Vulpes vulpes,RF,0.655131,2,0.291577,0.404104,FALSE,no
+Equus ferus przewalskii,Bison bonasus,RF,0.826152,1,0.323545,0.226481,FALSE,no
+Equus ferus przewalskii,Bos taurus,RF,0.561906,1,0.335434,0.234804,FALSE,no
+Equus ferus przewalskii,Canis lupus familiaris,RF,0.579422,2,0.258569,0.380998,FALSE,no
+Equus ferus przewalskii,Equus caballus,RF,0.73574,1,0,0,FALSE,no
+Equus ferus przewalskii,Erinaceus europaeus,RF,0.504199,1,0.759804,0.831863,FALSE,no
+Equus ferus przewalskii,Giraffa camelopardalis,RF,0.535882,1,0.52591,0.468137,FALSE,no
+Equus ferus przewalskii,Procyon lotor,RF,0.683052,2,0.577112,0.603978,FALSE,no
+Equus ferus przewalskii,Vulpes vulpes,RF,0.7307,2,0.291577,0.404104,FALSE,no
+Erinaceus europaeus,Bison bonasus,RF,0.596935,1,0.702396,0.791677,FALSE,no
+Erinaceus europaeus,Bos taurus,RF,0.538306,1,0.714286,0.8,FALSE,no
+Erinaceus europaeus,Canis lupus familiaris,RF,0.407116,2,0.786949,0.850864,FALSE,no
+Erinaceus europaeus,Equus caballus,RF,0.438693,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Equus ferus przewalskii,RF,0.687534,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Giraffa camelopardalis,RF,0.461439,1,0.857143,0.9,FALSE,no
+Erinaceus europaeus,Procyon lotor,RF,0.528801,2,0.706502,0.694551,FALSE,no
+Erinaceus europaeus,Vulpes vulpes,RF,0.573492,2,0.753942,0.827759,FALSE,no
+Giraffa camelopardalis,Bison bonasus,RF,0.566357,1,0.440461,0.408323,FALSE,no
+Giraffa camelopardalis,Bos taurus,RF,0.529213,1,0.428572,0.4,FALSE,no
+Giraffa camelopardalis,Canis lupus familiaris,RF,0.380948,2,0.641622,0.649136,FALSE,no
+Giraffa camelopardalis,Equus caballus,RF,0.366754,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Equus ferus przewalskii,RF,0.692508,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Erinaceus europaeus,RF,0.46015,1,0.857143,0.9,FALSE,no
+Giraffa camelopardalis,Procyon lotor,RF,0.511881,2,0.722069,0.705449,FALSE,no
+Giraffa camelopardalis,Vulpes vulpes,RF,0.573808,2,0.67463,0.672241,FALSE,no
+Procyon lotor,Bison bonasus,RF,0.674876,2,0.567323,0.597126,FALSE,no
+Procyon lotor,Bos taurus,RF,0.560918,2,0.579212,0.605449,FALSE,no
+Procyon lotor,Canis lupus familiaris,RF,0.650811,4,0.461399,0.52298,FALSE,no
+Procyon lotor,Equus caballus,RF,0.855242,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Equus ferus przewalskii,RF,0.764981,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Erinaceus europaeus,RF,0.496951,2,0.706502,0.694551,FALSE,no
+Procyon lotor,Giraffa camelopardalis,RF,0.470066,2,0.722069,0.705449,FALSE,no
+Procyon lotor,Procyon lotor,RF,0.702643,2,0,0,TRUE,yes
+Procyon lotor,Vulpes vulpes,RF,0.676044,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Bison bonasus,RF,0.644212,2,0.615121,0.630585,FALSE,no
+Vulpes vulpes,Bos taurus,RF,0.493376,2,0.627011,0.638908,FALSE,no
+Vulpes vulpes,Canis lupus familiaris,RF,0.510462,4,0.033007,0.123105,FALSE,no
+Vulpes vulpes,Equus caballus,RF,0.64687,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Equus ferus przewalskii,RF,0.805124,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Erinaceus europaeus,RF,0.482951,2,0.753942,0.827759,FALSE,no
+Vulpes vulpes,Giraffa camelopardalis,RF,0.549698,2,0.67463,0.672241,FALSE,no
+Vulpes vulpes,Procyon lotor,RF,0.627851,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Vulpes vulpes,RF,0.741289,2,0,0,TRUE,yes
+Bison bonasus,Bos taurus,ResNet,0.847312,1,0.01189,0.008323,FALSE,no
+Bison bonasus,Canis lupus familiaris,ResNet,0.333126,2,0.582114,0.60748,FALSE,no
+Bison bonasus,Equus caballus,ResNet,0.282244,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Equus ferus przewalskii,ResNet,0.782818,1,0.323545,0.226481,FALSE,no
+Bison bonasus,Erinaceus europaeus,ResNet,0.244795,1,0.702396,0.791677,FALSE,no
+Bison bonasus,Giraffa camelopardalis,ResNet,0.180155,1,0.440461,0.408323,FALSE,no
+Bison bonasus,Procyon lotor,ResNet,0.512722,2,0.567323,0.597126,FALSE,no
+Bison bonasus,Vulpes vulpes,ResNet,0.506206,2,0.615121,0.630585,FALSE,no
+Bos taurus,Bison bonasus,ResNet,0.090414,1,0.01189,0.008323,FALSE,no
+Bos taurus,Canis lupus familiaris,ResNet,0.277207,2,0.594003,0.615802,FALSE,no
+Bos taurus,Equus caballus,ResNet,0.187589,1,0.335434,0.234804,FALSE,no
+Bos taurus,Equus ferus przewalskii,ResNet,0.130546,1,0.335434,0.234804,FALSE,no
+Bos taurus,Erinaceus europaeus,ResNet,0.218247,1,0.714286,0.8,FALSE,no
+Bos taurus,Giraffa camelopardalis,ResNet,0.202299,1,0.428572,0.4,FALSE,no
+Bos taurus,Procyon lotor,ResNet,0.242724,2,0.579212,0.605449,FALSE,no
+Bos taurus,Vulpes vulpes,ResNet,0.324775,2,0.627011,0.638908,FALSE,no
+Canis lupus familiaris,Bison bonasus,ResNet,0.438462,2,0.582114,0.60748,FALSE,no
+Canis lupus familiaris,Bos taurus,ResNet,0.434419,2,0.594003,0.615802,FALSE,no
+Canis lupus familiaris,Canis lupus familiaris,ResNet,0.396733,2,0,0,TRUE,yes
+Canis lupus familiaris,Equus caballus,ResNet,0.485397,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Equus ferus przewalskii,ResNet,0.327167,2,0.258569,0.380998,FALSE,no
+Canis lupus familiaris,Erinaceus europaeus,ResNet,0.380439,2,0.786949,0.850864,FALSE,no
+Canis lupus familiaris,Giraffa camelopardalis,ResNet,0.224489,2,0.641622,0.649136,FALSE,no
+Canis lupus familiaris,Procyon lotor,ResNet,0.481985,4,0.461399,0.52298,FALSE,no
+Canis lupus familiaris,Vulpes vulpes,ResNet,0.46489,4,0.033007,0.123105,FALSE,no
+Equus caballus,Bison bonasus,ResNet,0.28799,1,0.323545,0.226481,FALSE,no
+Equus caballus,Bos taurus,ResNet,0.134043,1,0.335434,0.234804,FALSE,no
+Equus caballus,Canis lupus familiaris,ResNet,0.564807,2,0.258569,0.380998,FALSE,no
+Equus caballus,Equus ferus przewalskii,ResNet,0.338882,1,0,0,FALSE,no
+Equus caballus,Erinaceus europaeus,ResNet,0.108775,1,0.759804,0.831863,FALSE,no
+Equus caballus,Giraffa camelopardalis,ResNet,0.192678,1,0.52591,0.468137,FALSE,no
+Equus caballus,Procyon lotor,ResNet,0.447042,2,0.577112,0.603978,FALSE,no
+Equus caballus,Vulpes vulpes,ResNet,0.54592,2,0.291577,0.404104,FALSE,no
+Equus ferus przewalskii,Bison bonasus,ResNet,0.697339,1,0.323545,0.226481,FALSE,no
+Equus ferus przewalskii,Bos taurus,ResNet,0.425809,1,0.335434,0.234804,FALSE,no
+Equus ferus przewalskii,Canis lupus familiaris,ResNet,0.305462,2,0.258569,0.380998,FALSE,no
+Equus ferus przewalskii,Equus caballus,ResNet,0.24214,1,0,0,FALSE,no
+Equus ferus przewalskii,Erinaceus europaeus,ResNet,0.072922,1,0.759804,0.831863,FALSE,no
+Equus ferus przewalskii,Giraffa camelopardalis,ResNet,0.591501,1,0.52591,0.468137,FALSE,no
+Equus ferus przewalskii,Procyon lotor,ResNet,0.484319,2,0.577112,0.603978,FALSE,no
+Equus ferus przewalskii,Vulpes vulpes,ResNet,0.440198,2,0.291577,0.404104,FALSE,no
+Erinaceus europaeus,Bison bonasus,ResNet,0.756078,1,0.702396,0.791677,FALSE,no
+Erinaceus europaeus,Bos taurus,ResNet,0.374562,1,0.714286,0.8,FALSE,no
+Erinaceus europaeus,Canis lupus familiaris,ResNet,0.271373,2,0.786949,0.850864,FALSE,no
+Erinaceus europaeus,Equus caballus,ResNet,0.11746,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Equus ferus przewalskii,ResNet,0.223086,1,0.759804,0.831863,FALSE,no
+Erinaceus europaeus,Giraffa camelopardalis,ResNet,0.269811,1,0.857143,0.9,FALSE,no
+Erinaceus europaeus,Procyon lotor,ResNet,0.290963,2,0.706502,0.694551,FALSE,no
+Erinaceus europaeus,Vulpes vulpes,ResNet,0.245731,2,0.753942,0.827759,FALSE,no
+Giraffa camelopardalis,Bison bonasus,ResNet,0.207465,1,0.440461,0.408323,FALSE,no
+Giraffa camelopardalis,Bos taurus,ResNet,0.180738,1,0.428572,0.4,FALSE,no
+Giraffa camelopardalis,Canis lupus familiaris,ResNet,0.283669,2,0.641622,0.649136,FALSE,no
+Giraffa camelopardalis,Equus caballus,ResNet,0.169746,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Equus ferus przewalskii,ResNet,0.671306,1,0.52591,0.468137,FALSE,no
+Giraffa camelopardalis,Erinaceus europaeus,ResNet,0.205882,1,0.857143,0.9,FALSE,no
+Giraffa camelopardalis,Procyon lotor,ResNet,0.267007,2,0.722069,0.705449,FALSE,no
+Giraffa camelopardalis,Vulpes vulpes,ResNet,0.269515,2,0.67463,0.672241,FALSE,no
+Procyon lotor,Bison bonasus,ResNet,0.434341,2,0.567323,0.597126,FALSE,no
+Procyon lotor,Bos taurus,ResNet,0.375018,2,0.579212,0.605449,FALSE,no
+Procyon lotor,Canis lupus familiaris,ResNet,0.364141,4,0.461399,0.52298,FALSE,no
+Procyon lotor,Equus caballus,ResNet,0.520228,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Equus ferus przewalskii,ResNet,0.467219,2,0.577112,0.603978,FALSE,no
+Procyon lotor,Erinaceus europaeus,ResNet,0.421508,2,0.706502,0.694551,FALSE,no
+Procyon lotor,Giraffa camelopardalis,ResNet,0.256241,2,0.722069,0.705449,FALSE,no
+Procyon lotor,Procyon lotor,ResNet,0.461802,2,0,0,TRUE,yes
+Procyon lotor,Vulpes vulpes,ResNet,0.562647,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Bison bonasus,ResNet,0.475784,2,0.615121,0.630585,FALSE,no
+Vulpes vulpes,Bos taurus,ResNet,0.582602,2,0.627011,0.638908,FALSE,no
+Vulpes vulpes,Canis lupus familiaris,ResNet,0.358826,4,0.033007,0.123105,FALSE,no
+Vulpes vulpes,Equus caballus,ResNet,0.134542,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Equus ferus przewalskii,ResNet,0.478964,2,0.291577,0.404104,FALSE,no
+Vulpes vulpes,Erinaceus europaeus,ResNet,0.488303,2,0.753942,0.827759,FALSE,no
+Vulpes vulpes,Giraffa camelopardalis,ResNet,0.205913,2,0.67463,0.672241,FALSE,no
+Vulpes vulpes,Procyon lotor,ResNet,0.472818,4,0.428751,0.500126,FALSE,no
+Vulpes vulpes,Vulpes vulpes,ResNet,0.755378,2,0,0,TRUE,yes
