@@ -1,81 +1,90 @@
+
 # Cross-Species Transfer in Terrestrial Mammal Behavior Classification
 
-R and Python scripts for my thesis at the Leibniz Institute for Zoo and Wildlife Research (IZW) on cross-species transfer in terrestrial mammal behavior classification using tri-axial accelerometer data.
+This repository contains the code and selected supplementary files for the master’s thesis:
+
+**Cross-Species Transfer in Terrestrial Mammal Behavior Classification Using Tri-axial Accelerometer Data**
+
+The project evaluates how well accelerometer-based behaviour classification models generalise across heterogeneous datasets and terrestrial mammal species.
 
 <img width="1254" height="1254" alt="M A _Animals" src="https://github.com/user-attachments/assets/60189d8f-90ce-4210-9360-bf3efe61177d" />
 
+## Project overview
 
-## Overview
+Tri-axial accelerometer data were harmonised across multiple terrestrial mammal datasets and mapped to three broad behavioural classes:
 
-This repository contains R and Python scripts for analysing multiple tri-axial accelerometer datasets from terrestrial mammals.
+- foraging
+- locomotion
+- resting
 
-The project investigates how well behaviour classification models generalise across datasets and species, and whether transfer performance depends on behavioural class and biological distance between species.
-
-The species currently included are:
-
-- Dog
-- Fox (two datasets)
-- Hedgehog
-- Bison
-- Cattle
-- Horse (two datasets)
-- Giraffe
-- Raccoon (two datasets)
-
-## Research question
-
-To what extent do behaviour classification models trained on accelerometer data generalise across datasets and species, and how is this generalisation influenced by behavioural class and biological distance?
-
-## Hypotheses
-
-- **H1 (transfer gap):** Behaviour classification performance will be higher in within-dataset evaluations than in cross-dataset transfer evaluations.
-- **H2 (behaviour-class effect):** Cross-dataset performance differs across broad behavioural classes.
-- **H3 (distance effect):** Cross-species transfer performance will decline with increasing functional-biomechanical trait distance between source and target species.
+The study compares within-dataset performance, cross-dataset transfer, pairwise source–target transfer, and cross-species transfer in relation to functional-biomechanical trait distance.
 
 ## Models
 
-This project includes six models from three complementary modelling families:
+Six classifiers from three complementary modelling families were compared:
 
-- **Feature-based tree ensembles:** Random Forest, LightGBM
-- **Deep learning on raw time series:** baseline CNN, InceptionTime
-- **Specialised time-series classifiers:** MultiRocket, Hydra
-
-## Evaluation design
-
-The evaluation is structured into five complementary settings:
-
-- **Within-dataset:** baseline performance under minimal domain shift
-- **Inter-dataset:** transfer between related datasets
-- **Cross-dataset:** transfer to entirely unseen datasets
-- **Pairwise:** fine-grained source-target transfer comparisons
-- **Global:** pooled multi-dataset training across datasets
-
-Together, these settings separate within-dataset accuracy from increasingly challenging transfer scenarios.
+- Feature-based tree ensembles: Random Forest, LightGBM
+- Deep learning on raw time series: CNN, ResNet
+- Time-series classifiers: HYDRA, MultiRocket
 
 ## Repository structure
 
-- `R/` – data preparation, statistical analysis, and visualisation
-- `Python/` – modelling and classification scripts
-- `Traits/` – used Trait data for this study
+- `R/` – statistical analysis and visualisation scripts
+- `Python/` – preprocessing, modelling, and classification scripts
+- `Traits/` – trait data and distance calculations used for the transfer analysis
+- `supplementary_data/` – selected supplementary CSV files, ethogram harmonisation tables, trait-distance outputs, and sensitivity-analysis files
 
+## Supplementary data
+
+The folder `supplementary_data/` contains selected derived supplementary files used in the thesis, including:
+
+- ethogram harmonisation tables
+- trait profiles
+- functional-biomechanical distance outputs
+- cross-species transfer-analysis tables
+- sensitivity-analysis files
+- selected figure/table source data
+
+These files are derived outputs and supporting metadata. They are included to improve transparency and reproducibility of the analyses.
 
 ## Data availability
 
-Most datasets used in this project are not publicly available and therefore cannot be shared in this repository.
+Most raw accelerometer datasets used in this project are not publicly available and therefore cannot be shared in this repository.
+
+This repository includes selected derived supplementary files only. Full reproduction of all analyses is limited by raw dataset availability.
 
 Publicly available datasets used in this project include:
 
-- [*Horsing Around -- A Dataset Comprising Horse Movement*](https://data.4tu.nl/articles/_/12687551/1) (Horse)
-- [*Japanese Black Beef Cow Behavior Classification Dataset*](https://zenodo.org/records/5849025#.ZE-y_3ZByHu) (Cattle)
+- Horsing Around -- A Dataset Comprising Horse Movement
+- Japanese Black Beef Cow Behavior Classification Dataset
 
 ## Reproducibility
 
-This repository provides the code used for data processing, modelling, evaluation, and visualisation. Full reproduction of all analyses is limited by dataset availability.
+This repository provides the code used for preprocessing, modelling, evaluation, statistical analysis, and visualisation.
 
-## Citation
+Selected derived supplementary CSV files are included in `supplementary_data/`.
 
-Citation details for the thesis and repository will be added after submission/publication.
+Full reproduction of all analyses requires access to the original accelerometer datasets.
+
+## Software
+
+The analyses were implemented mainly in:
+
+- Python 3.11
+- R 4.5.2
+
+Python was used for preprocessing, feature extraction, model training, and prediction.
+
+R was used for statistical analysis, hypothesis testing, and visualisation.
+
+## Thesis context
+
+This repository accompanies a master’s thesis submitted in the M.Sc. Data Analytics programme at Justus Liebig University Giessen.
 
 ## License
 
-This repository is licensed under the MIT License.
+Please see the `LICENSE` file for licensing information.
+
+## AI use
+
+The use of AI tools is documented in `AI_USE_STATEMENT.md`.
