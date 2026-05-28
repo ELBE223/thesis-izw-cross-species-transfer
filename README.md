@@ -5,13 +5,13 @@ This repository contains the code and selected supplementary files for the maste
 
 **Cross-Species Transfer in Terrestrial Mammal Behavior Classification Using Tri-axial Accelerometer Data**
 
-The project evaluates how well accelerometer-based behaviour classification models generalise across heterogeneous datasets and terrestrial mammal species.
+The project evaluates how well accelerometer-based behavior classification models generalize across heterogeneous datasets and terrestrial mammal species.
 
 <img width="1254" height="1254" alt="M A _Animals" src="https://github.com/user-attachments/assets/60189d8f-90ce-4210-9360-bf3efe61177d" />
 
 ## Project overview
 
-Tri-axial accelerometer data were harmonised across multiple terrestrial mammal datasets and mapped to three broad behavioural classes:
+Tri-axial accelerometer data were harmonised across multiple terrestrial mammal datasets and mapped to three broad behavioral classes:
 
 - foraging
 - locomotion
