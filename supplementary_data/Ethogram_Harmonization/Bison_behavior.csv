@@ -1,0 +1,42 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+SKO,SKO,"Standing, head up",Resting,RUH,Ruheverhalten,TRUE
+SKM,SKM,"Standing, head middle",Resting,RUH,Ruheverhalten,TRUE
+SKN,SKN,"Standing, head neutral",Resting,RUH,Ruheverhalten,TRUE
+SSA,SsA,"Standing, heavy breathing, head up",Resting,SAT,Schwer Atmen,TRUE
+SPU,SPU,"Standing, heavy breathing, head neutral",Resting,SAT,Schwer Atmen,TRUE
+SWK,SWK,"Standing, ruminating, head up",Resting,WDK,Wiederkaeuen,TRUE
+LIO,LIO,"Lying upright, head up",Resting,RUH,Ruheverhalten,TRUE
+LIT,LIT,"Lying upright, head low",Resting,LIT,"Liegen, Kopf tief",TRUE
+LIN,LIN,"Lying upright, head neutral",Resting,RUH,Ruheverhalten,TRUE
+LWO,LWO,"Lying upright, ruminating, head up",Resting,WDK,Wiederkaeuen,TRUE
+LWN,LWN,"Lying upright, ruminating, head neutral",Resting,WDK,Wiederkaeuen,TRUE
+LSA,LsA,"Lying upright, heavy breathing, head up",Resting,SAT,Schwer Atmen,TRUE
+LPN,LPN,"Lying upright, heavy breathing, head neutral",Resting,SAT,Schwer Atmen,TRUE
+STL,STL,Lateral recumbency,Resting,STL,Seitenlage,TRUE
+SCH,SCH,Walk,Locomotion,SCH,Schritt,TRUE
+TRB,TRB,Trot,Locomotion,TRB,Trab,TRUE
+GAL,GAL,Gallop,Locomotion,GAL,Galopp,TRUE
+FSG,FSG,"Feeding on shrub, head stretched",Foraging,FRE,Fressverhalten,TRUE
+FSO,FSO,"Feeding on shrub, head up",Foraging,FRE,Fressverhalten,TRUE
+FSH,FSO,"Feeding on shrub, head up",Foraging,FRE,Fressverhalten,TRUE
+FSM,FSM,"Feeding on shrub, head middle",Foraging,FRE,Fressverhalten,TRUE
+FSN,FSN,"Feeding on shrub, head neutral",Foraging,FRE,Fressverhalten,TRUE
+FST,FST,"Feeding on shrub, head low",Foraging,FRE,Fressverhalten,TRUE
+FVB,FvB,Feeding from ground,Foraging,FRE,Fressverhalten,TRUE
+KKO,KKO,"Chewing, head up",Foraging,FRE,Fressverhalten,TRUE
+KKM,KKM,"Chewing, head middle",Foraging,FRE,Fressverhalten,TRUE
+KKN,KKN,"Chewing, head neutral",Foraging,FRE,Fressverhalten,TRUE
+KKT,KKT,"Chewing, head low",Foraging,FRE,Fressverhalten,TRUE
+GRA,GRA,"Grazing, head low",Foraging,FRE,Fressverhalten,TRUE
+RSG,RSG,"Bark stripping, head stretched",Foraging,FRE,Fressverhalten,TRUE
+RSH,RSH,"Bark stripping, head up",Foraging,FRE,Fressverhalten,TRUE
+HFO,HFO,"Hay feeding, head up",Foraging,FRE,Fressverhalten,TRUE
+HFM,HFM,"Hay feeding, head middle",Foraging,FRE,Fressverhalten,TRUE
+HFN,HFN,"Hay feeding, head neutral",Foraging,FRE,Fressverhalten,TRUE
+HFT,HFT,"Hay feeding, head low",Foraging,FRE,Fressverhalten,TRUE
+KAM,KAM,Fighting,Other,EXCLUDED,Nicht in Analyse,FALSE
+PUT,PUT,Self-grooming,Other,EXCLUDED,Nicht in Analyse,FALSE
+SAB,SaB,Rubbing on tree,Other,SaB,Scheuern am Baum,TRUE
+WAL,WAL,Rolling,Other,EXCLUDED,Nicht in Analyse,FALSE
+TRK,TRK,"Drinking, head low",Other,EXCLUDED,Nicht in Analyse,FALSE
+TRI,TRK,"Drinking, head low",Other,EXCLUDED,Nicht in Analyse,FALSE

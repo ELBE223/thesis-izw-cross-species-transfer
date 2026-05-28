@@ -1,0 +1,20 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+WAL,WAL,Walking,Locomotion,LOC,Fortbewegung,TRUE
+RUN,RUN,Running,Locomotion,LOC,Fortbewegung,TRUE
+FEA,FEA,Feeding above eye level,Foraging,FOR,Nahrungssuche,TRUE
+FTM,FTM,Feeding eye to middle level,Foraging,FOR,Nahrungssuche,TRUE
+FED,FED,Feeding deep level,Foraging,FOR,Nahrungssuche,TRUE
+FEG,FEG,Feeding ground level,Foraging,FOR,Nahrungssuche,TRUE
+DRI,DRI,Drinking,Foraging,FOR,Nahrungssuche,TRUE
+STA,STA,Standing,Resting,RES,Ruhen,TRUE
+LIE,LIE,Lying,Resting,RES,Ruhen,TRUE
+RUM,RUM,Ruminating,Resting,RES,Ruhen,TRUE
+SLE,SLE,Sleeping,Resting,RES,Ruhen,TRUE
+1ST,1St,Standing,Resting,RES,Ruhen,TRUE
+1STMI,1StMi,Standing middle level,Resting,RES,Ruhen,TRUE
+1STGU,1St_Gu,Standing with head or neck movement,Other,OTH,Sonstiges,TRUE
+1STGUMI,1St_GuMi,Standing with head or neck movement middle level,Other,OTH,Sonstiges,TRUE
+1STGUTI,1St_GuTi,Standing with head or neck movement deep level,Other,OTH,Sonstiges,TRUE
+GRO,GRO,Grooming,Other,OTH,Sonstiges,TRUE
+SOC,SOC,Social behaviour,Other,OTH,Sonstiges,TRUE
+FIG,FIG,Fighting,Other,OTH,Sonstiges,TRUE

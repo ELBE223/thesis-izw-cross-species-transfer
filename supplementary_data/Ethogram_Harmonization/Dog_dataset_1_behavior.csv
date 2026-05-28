@@ -1,0 +1,10 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+SIT,SIT,Sitting,Resting,REST,Resting,TRUE
+LIG,LIG,Lying,Resting,REST,Resting,TRUE
+STE,STE,Standing,Resting,REST,Resting,TRUE
+GEH,GEH,Walking,Locomotion,LOCO,Locomotion,TRUE
+REN,REN,Running,Locomotion,LOCO,Locomotion,TRUE
+SPR,SPR,Jumping,Locomotion,LOCO,Locomotion,TRUE
+KNA,KNA,Gnawing,Foraging,FORA,Foraging,TRUE
+SCH,SCH,Sniffing,Foraging,FORA,Foraging,TRUE
+BUD,BUD,Digging,Other,OTHER,Other,FALSE

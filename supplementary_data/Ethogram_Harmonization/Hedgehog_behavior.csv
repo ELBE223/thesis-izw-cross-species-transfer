@@ -1,0 +1,30 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+RUHEND,REST,Resting inactive,Resting,RESTING,Ruhen,True
+RESTING,REST,Resting inactive,Resting,RESTING,Ruhen,True
+INACTIVE,REST,Resting inactive,Resting,RESTING,Ruhen,True
+EINGEKUGELT,BALLED,Balled up,Resting,BALLED_UP,Eingekugelt,True
+ZUSAMMENGEKUGELT,BALLED,Balled up,Resting,BALLED_UP,Eingekugelt,True
+BALLEDUP,BALLED,Balled up,Resting,BALLED_UP,Eingekugelt,True
+CURLEDUP,CURLED,Curled up,Resting,CURLED_UP,Eingerollt,True
+GEHEN,WALK,Walking,Locomotion,WALKING,Gehen,True
+LAUFEND,WALK,Walking,Locomotion,WALKING,Gehen,True
+WALKING,WALK,Walking,Locomotion,WALKING,Gehen,True
+RENNEN,RUN,Running,Locomotion,RUNNING,Rennen,True
+RENNEND,RUN,Running,Locomotion,RUNNING,Rennen,True
+RUNNING,RUN,Running,Locomotion,RUNNING,Rennen,True
+SCHNUPPERT,SNIFF,Sniffing,Foraging,SNIFFING,Schnuppern,True
+SCHNUPPERN,SNIFF,Sniffing,Foraging,SNIFFING,Schnuppern,True
+SNIFFING,SNIFF,Sniffing,Foraging,SNIFFING,Schnuppern,True
+FRESSEN,EAT,Eating,Foraging,EATING,Fressen,True
+EATING,EAT,Eating,Foraging,EATING,Fressen,True
+KRATZTSICH,SCRATCH,Self-scratching,Self-maintenance,SELF_SCRATCHING,Kratzt sich,True
+SELFSCRATCHING,SCRATCH,Self-scratching,Self-maintenance,SELF_SCRATCHING,Kratzt sich,True
+SCRATCHING,SCRATCH,Self-scratching,Self-maintenance,SELF_SCRATCHING,Kratzt sich,True
+SCHUTTELTSICH,SHAKE,Self-shaking,Self-maintenance,SELF_SHAKING,Schuettelt sich,True
+SELFSHAKING,SHAKE,Self-shaking,Self-maintenance,SELF_SHAKING,Schuettelt sich,True
+SHAKING,SHAKE,Self-shaking,Self-maintenance,SELF_SHAKING,Schuettelt sich,True
+WIRDBEWEGT,EXCLUDE,Excluded: moved by handler,Other,EXCLUDED,Ausgeschlossen: wird bewegt,False
+WIRDGETRAGEN,EXCLUDE,Excluded: carried by handler,Other,EXCLUDED,Ausgeschlossen: wird getragen,False
+WIRDGESCHUTTELT,EXCLUDE,Excluded: shaken by handler,Other,EXCLUDED,Ausgeschlossen: wird geschuettelt,False
+STARTSHAKE,EXCLUDE,Excluded: shake marker start,Other,EXCLUDED,Ausgeschlossen: technischer Startmarker,False
+ENDSHAKE,EXCLUDE,Excluded: shake marker end,Other,EXCLUDED,Ausgeschlossen: technischer Endmarker,False

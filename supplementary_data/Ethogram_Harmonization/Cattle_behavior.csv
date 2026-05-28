@@ -1,0 +1,15 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+RES,RES,Resting standing,Resting,REST,Resting,TRUE
+RUS,RUS,Ruminating standing,Resting,REST,Resting,TRUE
+REL,REL,Resting lying,Resting,REST,Resting,TRUE
+MOV,MOV,Moving,Locomotion,LOCO,Locomotion,TRUE
+ESC,ESC,Escaping,Locomotion,LOCO,Locomotion,FALSE
+GRZ,GRZ,Grazing,Foraging,FOR,Foraging,TRUE
+FES,FES,Feeding in stanchion,Foraging,FOR,Foraging,TRUE
+DRN,DRN,Drinking,Foraging,FOR,Foraging,TRUE
+SLT,SLT,Salt licking,Foraging,FOR,Foraging,FALSE
+ETC,ETC,Other behaviors,Other,OTHER,Other,FALSE
+LCK,LCK,Licking,Other,OTHER,Other,FALSE
+URI,URI,Urinating,Other,OTHER,Other,FALSE
+ATT,ATT,Attacking,Other,OTHER,Other,FALSE
+BMN,BMN,Being mounted,Other,OTHER,Other,FALSE

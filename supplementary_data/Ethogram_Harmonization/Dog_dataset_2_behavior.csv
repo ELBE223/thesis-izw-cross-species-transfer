@@ -1,0 +1,7 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+GO,GO,Going,Locomotion,LOCO,Locomotion,TRUE
+RUN,RUN,Running,Locomotion,LOCO,Locomotion,TRUE
+SIT,SIT,Sitting,Resting,REST,Resting,TRUE
+LIE,LIE,Lying,Resting,REST,Resting,TRUE
+STA,STA,Standing,Resting,REST,Resting,TRUE
+EAT,EAT,Eating,Foraging,FORA,Foraging,TRUE

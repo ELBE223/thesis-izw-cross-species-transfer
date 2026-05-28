@@ -1,0 +1,24 @@
+label_norm,label_raw,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+grazing,grazing,Grazing,Foraging,FOR,Nahrungssuche,TRUE
+feeding,feeding,Feeding,Foraging,FOR,Nahrungssuche,TRUE
+eating,eating,Eating,Foraging,FOR,Nahrungssuche,TRUE
+foraging,foraging,Foraging,Foraging,FOR,Nahrungssuche,TRUE
+walking_rider,walking-rider,Walking rider,Locomotion,LOC,Fortbewegung,TRUE
+trotting_rider,trotting-rider,Trotting rider,Locomotion,LOC,Fortbewegung,TRUE
+cantering_rider,cantering-rider,Cantering rider,Locomotion,LOC,Fortbewegung,TRUE
+galloping_rider,galloping-rider,Galloping rider,Locomotion,LOC,Fortbewegung,TRUE
+walking_horse,walking-horse,Walking horse,Locomotion,LOC,Fortbewegung,TRUE
+trotting_horse,trotting-horse,Trotting horse,Locomotion,LOC,Fortbewegung,TRUE
+cantering_horse,cantering-horse,Cantering horse,Locomotion,LOC,Fortbewegung,TRUE
+galloping_horse,galloping-horse,Galloping horse,Locomotion,LOC,Fortbewegung,TRUE
+walking,walking,Walking,Locomotion,LOC,Fortbewegung,TRUE
+trotting,trotting,Trotting,Locomotion,LOC,Fortbewegung,TRUE
+cantering,cantering,Cantering,Locomotion,LOC,Fortbewegung,TRUE
+galloping,galloping,Galloping,Locomotion,LOC,Fortbewegung,TRUE
+standing,standing,Standing,Resting,RES,Ruhen,TRUE
+resting,resting,Resting,Resting,RES,Ruhen,TRUE
+lying,lying,Lying,Resting,RES,Ruhen,TRUE
+laying,laying,Laying,Resting,RES,Ruhen,TRUE
+sleeping,sleeping,Sleeping,Resting,RES,Ruhen,TRUE
+other,other,Other,Other,OTH,Sonstiges,TRUE
+unknown,unknown,Unknown,Other,OTH,Sonstiges,TRUE

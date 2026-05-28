@@ -1,0 +1,9 @@
+code_norm,code_ma,behavior_en,main_class,ma_category_code,ma_category_de,model_use_ma
+WALKING,WALKING,Walking,Locomotion,Locomotion,Fortbewegung,TRUE
+TROTTING,TROTTING,Trotting,Locomotion,Locomotion,Fortbewegung,TRUE
+RESTING,RESTING,Resting,Resting,Resting,Ruhen,TRUE
+FORAGING,FORAGING,Foraging,Foraging,Foraging,Nahrungssuche,TRUE
+DIGGING,DIGGING,Digging,Foraging,Foraging,Nahrungssuche,TRUE
+STOCKING,STOCKING,Stocking,Foraging,Foraging,Nahrungssuche,TRUE
+DRINKING,DRINKING,Drinking,Foraging,Foraging,Nahrungssuche,TRUE
+GROOMING,GROOMING,Grooming,Other,Other,Sonstige,FALSE
