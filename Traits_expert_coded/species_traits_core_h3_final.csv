@@ -1,0 +1,10 @@
+species,log_body_mass_g,dominant_locomotor_mode,body_configuration_type,expected_trunk_motion_amplitude,expected_directional_change_tendency,expected_head_neck_contribution_to_acceleration_relevant_motion,dominant_feeding_foraging_mode
+Bison bonasus,13.122,cursorial,robust_quadruped,moderate,low,high,low_head_grazing
+Bos taurus,13.710,cursorial,robust_quadruped,moderate,low,high,low_head_grazing
+Canis lupus familiaris,10.240,cursorial,standard_quadruped,high,high,moderate,ground_level_search_feeding
+Equus caballus,12.429,cursorial,standard_quadruped,high,moderate,high,low_head_grazing
+Equus ferus przewalskii,12.766,cursorial,standard_quadruped,high,moderate,high,low_head_grazing
+Erinaceus europaeus,6.939,semifossorial,compact_low_profile_body,low,moderate,low,ground_cover_search_probe
+Giraffa camelopardalis,13.710,cursorial,tall_long_necked_quadruped,very_high,low,very_high,high_browsing
+Procyon lotor,8.617,scansorial,generalist_quadruped,moderate,high,high,ground_tree_mixed_manipulative
+Vulpes vulpes,8.608,cursorial,standard_quadruped,high,high,moderate,ground_level_search_feeding
