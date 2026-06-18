@@ -4,7 +4,7 @@
 
 The conceptual design of this thesis, including the research question, hypotheses, methodological framework, dataset selection, preprocessing decisions, model selection, statistical analyses, interpretation of results, and final scientific conclusions, was developed by the author based on independent reasoning and the scientific literature.
 
-AI-based tools, including ChatGPT, Claude, and Gemini, were used as supportive technical and editorial assistants during the preparation and review of analysis code, repository documentation, and script-level comments. Their use was limited to tasks such as identifying possible coding errors, debugging R and Python scripts, checking code consistency, improving code readability, adding concise English comments, suggesting clearer script headers, and reviewing whether the implemented code structure matched the author-defined analytical workflow.
+AI-based tools, including ChatGPT, Claude, and Gemini, were used as supportive technical and editorial assistants during the preparation and review of analysis code, repository documentation, and script-level comments. Their use was limited to tasks such as identifying possible coding errors, debugging R and Python scripts, checking code consistency, improving code readability, adding concise English comments, suggesting clearer script headers, reviewing whether the implemented code structure matched the author-defined analytical workflow, and checking possible data leakage risks.
 
 AI tools were not used to autonomously generate empirical results, fabricate data, fabricate references, make final methodological decisions, or replace the author’s interpretation of the findings. Any AI-assisted suggestions were critically reviewed, tested, and, where appropriate, modified by the author before inclusion. AI-assisted code review was conducted at the level of scripts, documentation, and workflow structure; non-public raw datasets were not provided to AI tools. The author takes full responsibility for the final code, analyses, results, interpretation, and written thesis content.
 
@@ -14,22 +14,16 @@ During the preparation of the analysis repository, AI tools were used as technic
 
 AI-assisted support included:
 
-- detecting and fixing syntax or runtime errors in R and Python scripts;
-- checking whether file paths, input registries, and output folders were handled consistently;
-- reviewing metric calculations and export routines for consistency;
-- improving code readability without changing the analytical logic;
-- adding concise English comments and publication-ready script headers;
-- checking whether R analysis scripts were consistent with the author-defined hypotheses H1, H2, and H3;
-- reviewing Python model scripts for reproducibility, random seeds, output structure, and possible edge cases;
-- checking possible data leakage risks in within-dataset, cross-dataset, pairwise transfer, and pooled multi-dataset evaluation scripts.
+* detecting and fixing syntax or runtime errors in R and Python scripts;
+* checking whether file paths, input registries, and output folders were handled consistently;
+* reviewing metric calculations and export routines for consistency;
+* improving code readability without changing the analytical logic;
+* adding concise English comments and publication-ready script headers;
+* checking whether R analysis scripts were consistent with the author-defined hypotheses H1, H2, and H3;
+* reviewing Python model scripts for reproducibility, random seeds, output structure, and possible edge cases;
+* checking possible data leakage risks in within-dataset, cross-dataset, pairwise transfer, and pooled multi-dataset evaluation scripts.
 
 The final implementation decisions, testing, interpretation, and inclusion of all code changes were performed by the author.
-
-## Note on AI-assisted code editing
-
-Some scripts in this repository were reviewed with the support of AI tools to improve readability, detect possible bugs, harmonize comments, and standardize script headers.
-
-The analytical workflow, model choices, statistical tests, interpretation, and final code decisions were made by the author. AI-generated suggestions were not accepted automatically but were checked, tested, and adapted before inclusion.
 
 ## Representative prompts used for technical code assistance
 
@@ -79,23 +73,10 @@ Please review this Python script for reproducibility. Check whether random seeds
 
 **Tools used:** ChatGPT, Claude, Gemini
 
-**Purpose of use:**  
+**Purpose of use:**
 AI tools were used for technical support during code preparation, including debugging, code review, readability improvements, concise English comments, script headers, reproducibility checks, and consistency checks across R and Python scripts.
 
-**Type of scripts reviewed:**  
+**Type of scripts reviewed:**
 
-- R scripts for H1, H2, H3, H3 sensitivity analyses, and H3 bias-control analyses.
-- Python scripts for preprocessing, feature extraction, model training, within-dataset evaluation, cross-dataset transfer, pairwise transfer, pooled multi-dataset evaluation, and metric export.
-
-**Nature of AI assistance:**  
-
-- Syntax and runtime bug checks.
-- Review of possible data leakage risks.
-- Review of input/output consistency.
-- Suggestions for clearer code comments and documentation.
-- Suggestions for publication-ready script headers.
-- Checks of whether code structure matched the intended analysis.
-- Review of reproducibility settings such as random seeds and output folders.
-
-**Author responsibility:**  
-All AI-generated suggestions were reviewed, tested, and adapted by the author. The final code, results, analyses, interpretation, and thesis content remain the responsibility of the author.
+* R scripts for H1, H2, H3, H3 sensitivity analyses, H3 bias-control analyses, H3 robustness analyses using TimeTree and Elton trait data, and forest-plot visualization of distance effects.
+* Python scripts for preprocessing, feature extraction, model training, within-dataset evaluation, cross-dataset transfer, pairwise transfer, pooled multi-dataset evaluation, and metric export.
