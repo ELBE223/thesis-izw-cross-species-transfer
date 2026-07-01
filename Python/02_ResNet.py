@@ -1,4 +1,4 @@
-# 04_ResNet.py
+# 02_ResNet.py
 # Author : Lucas Beseler
 # Date   : 2026-06-07
 
