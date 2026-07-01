@@ -1,6 +1,6 @@
 # 01_CNN
 # Author : Lucas Beseler
-# Date   : 2026-01-07
+# Date   : 2026-07-01
 
 from __future__ import annotations
 
