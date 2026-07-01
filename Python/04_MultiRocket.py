@@ -260,22 +260,42 @@ def build_confusion_df(truth: pd.Series, pred: pd.Series) -> pd.DataFrame:
 
 
 def metric_from_confusion(cm: pd.DataFrame) -> dict[str, float]:
-    cm = cm.reindex(index=KEEP_BEHAVIORS, columns=KEEP_BEHAVIORS, fill_value=0)
+    """Compute overall metrics with zero_division=0.
 
+    Macro metrics are always averaged over the three harmonized behavior classes.
+    Undefined precision, recall, or F1 values are set to 0.0.
+    """
+    cm = cm.reindex(index=KEEP_BEHAVIORS, columns=KEEP_BEHAVIORS, fill_value=0).astype(float)
+
+    total = float(cm.to_numpy().sum())
     row_sums = cm.sum(axis=1).astype(float)
     col_sums = cm.sum(axis=0).astype(float)
     diag = pd.Series(np.diag(cm.to_numpy()), index=KEEP_BEHAVIORS, dtype=float)
 
-    accuracy = float(diag.sum() / cm.to_numpy().sum()) if cm.to_numpy().sum() > 0 else np.nan
-    recall = (diag / row_sums).replace([np.inf, -np.inf], np.nan)
-    precision = (diag / col_sums).replace([np.inf, -np.inf], np.nan)
-    f1 = (2 * precision * recall / (precision + recall)).replace([np.inf, -np.inf], np.nan)
+    accuracy = float(diag.sum() / total) if total > 0 else np.nan
+
+    recall_values: list[float] = []
+    precision_values: list[float] = []
+    f1_values: list[float] = []
+
+    for behavior in KEEP_BEHAVIORS:
+        tp = float(diag.get(behavior, 0.0))
+        support = float(row_sums.get(behavior, 0.0))
+        predicted = float(col_sums.get(behavior, 0.0))
+
+        recall = tp / support if support > 0 else 0.0
+        precision = tp / predicted if predicted > 0 else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+
+        recall_values.append(recall)
+        precision_values.append(precision)
+        f1_values.append(f1)
 
     return {
         "accuracy": accuracy,
-        "macro_recall": float(recall.mean(skipna=True)),
-        "macro_precision": float(precision.mean(skipna=True)),
-        "macro_f1": float(f1.mean(skipna=True)),
+        "macro_recall": float(np.mean(recall_values)),
+        "macro_precision": float(np.mean(precision_values)),
+        "macro_f1": float(np.mean(f1_values)),
     }
 
 
@@ -286,28 +306,37 @@ def get_metrics(truth: pd.Series, pred: pd.Series) -> pd.DataFrame:
 
 
 def get_behavior_metrics(truth: pd.Series, pred: pd.Series) -> pd.DataFrame:
+    """Compute class-wise metrics with zero_division=0."""
     cm = pd.crosstab(pd.Series(truth), pd.Series(pred), dropna=False)
-    cm = cm.reindex(index=KEEP_BEHAVIORS, columns=KEEP_BEHAVIORS, fill_value=0)
+    cm = cm.reindex(index=KEEP_BEHAVIORS, columns=KEEP_BEHAVIORS, fill_value=0).astype(float)
 
     row_sums = cm.sum(axis=1).astype(float)
     col_sums = cm.sum(axis=0).astype(float)
     diag = pd.Series(np.diag(cm.to_numpy()), index=KEEP_BEHAVIORS, dtype=float)
 
-    recall = (diag / row_sums).replace([np.inf, -np.inf], np.nan)
-    precision = (diag / col_sums).replace([np.inf, -np.inf], np.nan)
-    f1 = (2 * precision * recall / (precision + recall)).replace([np.inf, -np.inf], np.nan)
+    rows = []
+    for behavior in KEEP_BEHAVIORS:
+        tp = float(diag.get(behavior, 0.0))
+        support = float(row_sums.get(behavior, 0.0))
+        predicted = float(col_sums.get(behavior, 0.0))
 
-    return pd.DataFrame(
-        {
-            "behavior": KEEP_BEHAVIORS,
-            "support": [int(row_sums.get(b, 0)) for b in KEEP_BEHAVIORS],
-            "predicted": [int(col_sums.get(b, 0)) for b in KEEP_BEHAVIORS],
-            "tp": [int(diag.get(b, 0)) for b in KEEP_BEHAVIORS],
-            "recall": [recall.get(b, np.nan) for b in KEEP_BEHAVIORS],
-            "precision": [precision.get(b, np.nan) for b in KEEP_BEHAVIORS],
-            "f1": [f1.get(b, np.nan) for b in KEEP_BEHAVIORS],
-        }
-    )
+        recall = tp / support if support > 0 else 0.0
+        precision = tp / predicted if predicted > 0 else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+
+        rows.append(
+            {
+                "behavior": behavior,
+                "support": int(support),
+                "predicted": int(predicted),
+                "tp": int(tp),
+                "recall": recall,
+                "precision": precision,
+                "f1": f1,
+            }
+        )
+
+    return pd.DataFrame(rows)
 
 
 def save_text_summary(path: Path, lines: list[str]) -> None:
@@ -848,6 +877,7 @@ def run_global_multirocket(all_dt: pd.DataFrame, x_cols: list[str], y_cols: list
         f"Train rows after balancing: {len(train_bal)}",
         f"Test rows: {len(test_dt)}",
         f"MultiRocket settings: {MULTIROCKET_SETTINGS_NOTE}",
+        "Metrics: zero_division=0; macro metrics averaged over all three behavior classes",
         f"Loading settings: {LOADING_SETTINGS_NOTE}",
         f"Cap settings: {CAP_SETTINGS_NOTE}",
         f"MultiRocket n_jobs: {MULTIROCKET_N_JOBS}",
