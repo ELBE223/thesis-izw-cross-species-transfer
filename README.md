@@ -31,7 +31,7 @@ Six classifiers from three complementary modelling families were compared:
 
 - `R/` – statistical analysis and visualisation scripts
 - `Python/` – preprocessing, modelling, and classification scripts
-- `Traits/` – trait data and distance calculations used for the transfer analysis
+- `Traits_expert_coded/` – expert-coded trait data used for the functional-biomechanical distance calculations
 - `supplementary_data/` – selected supplementary CSV files, ethogram harmonisation tables, trait-distance outputs, and sensitivity-analysis files
 
 ## Supplementary data
