@@ -11,7 +11,7 @@ The project evaluates how well accelerometer-based behavior classification model
 
 ## Project overview
 
-Tri-axial accelerometer data were harmonised across multiple terrestrial mammal datasets and mapped to three broad behavioral classes:
+Tri-axial accelerometer data were harmonized across multiple terrestrial mammal datasets and mapped to three broad behavioral classes:
 
 - foraging
 - locomotion
@@ -21,7 +21,7 @@ The study compares within-dataset performance, cross-dataset transfer, pairwise 
 
 ## Models
 
-Six classifiers from three complementary modelling families were compared:
+Six classifiers from three complementary modeling families were compared:
 
 - Feature-based tree ensembles: Random Forest, LightGBM
 - Deep learning on raw time series: CNN, ResNet
@@ -29,8 +29,8 @@ Six classifiers from three complementary modelling families were compared:
 
 ## Repository structure
 
-- `R/` – statistical analysis and visualisation scripts
-- `Python/` – preprocessing, modelling, and classification scripts
+- `R/` – statistical analysis and visualization scripts
+- `Python/` – preprocessing, modeling, and classification scripts
 - `Traits_expert_coded/` – expert-coded trait data used for the functional-biomechanical distance calculations
 - `supplementary_data/` – selected supplementary CSV files, ethogram harmonisation tables, trait-distance outputs, and sensitivity-analysis files
 
