@@ -25,9 +25,7 @@ AI-assisted support included:
 
 The final implementation decisions, testing, interpretation, and inclusion of all code changes were performed by the author.
 
-## Representative prompts used for technical code assistance
-
-The following prompts represent the type of AI-assisted support used during the preparation and review of the R and Python analysis scripts. They are included to document the role of AI tools transparently. The prompts were used for technical assistance and consistency checks, not to replace the author’s scientific reasoning, methodological decisions, or interpretation of results.
+## Representative prompts used 
 
 ### Prompt 1: R script header and documentation
 
@@ -69,7 +67,7 @@ Please check whether this Python script calculates classification metrics correc
 
 Please review this Python script for reproducibility. Check whether random seeds are set consistently for Python, NumPy, machine-learning libraries, and deep-learning frameworks where applicable. Please also check whether parallel processing, training and test splits, and exported results are handled reproducibly. Do not change the scientific workflow.
 
-### Prompt 11: Language and style review
+### Prompt 11: Language and style review_thesis
 
 Please review the following thesis passage for grammar, clarity, conciseness, and academic American English. Preserve the scientific meaning, argumentation, citations, numerical results, and level of certainty. Do not introduce new claims, references, interpretations, or methodological changes. Identify substantial issues separately and otherwise suggest only minimal language edits.
 
@@ -84,6 +82,3 @@ AI tools were used for technical support during code preparation, including debu
 
 * R scripts for H1, H2, and H3, including the H3 sensitivity analyses;
 * Python scripts for preprocessing, feature extraction, model training, within-dataset evaluation, cross-dataset transfer, pairwise transfer, pooled multi-dataset evaluation, and metric export.
-
-**Use of AI tools for language editing:**
-AI tools were additionally used for language and style review and for the partial translation into English of text initially drafted by the author. This concerned the abstract and selected passages in Sections 1.1, 1.2, 4.1, 4.4, 4.6, and 4.7. The underlying scientific content, argumentation, interpretation, numerical results, citations, and final wording were reviewed and approved by the author.
