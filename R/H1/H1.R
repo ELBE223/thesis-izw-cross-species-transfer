@@ -35,6 +35,8 @@ p_value_position <- "bottom_right"   # "top_left" or "bottom_right"
 # - "holdout": original Within_* mode (25 % individual holdout, Models/<model>/Within_<model>)
 # - "loio":    leave-one-individual-out from Python/within_loio.py
 #              (Output_checks/Within_LOIO/<model>); results are written to Output_checks/H1_loio
+# - "loio_partial": as "loio", incl. datasets in which a fold had to be skipped
+#              (sensitivity analysis); results are written to Output_checks/H1_loio_partial
 within_source <- "holdout"
 
 
@@ -44,12 +46,17 @@ base_dir      <- "/Volumes/Z Slim/11_05_2026_Data_Analysis"
 models_dir    <- file.path(base_dir, "Models")
 # Re-analysis outputs go to Output_checks; the thesis outputs in Output_R stay untouched.
 output_r_root <- file.path(base_dir, "Output_checks")
-out_dir       <- file.path(output_r_root, ifelse(within_source == "loio", "H1_loio", "H1"))
-loio_dir      <- file.path(output_r_root, "Within_LOIO")
 
-if (!within_source %in% c("holdout", "loio")) {
-  stop("within_source must be \"holdout\" or \"loio\".")
+if (!within_source %in% c("holdout", "loio", "loio_partial")) {
+  stop("within_source must be \"holdout\", \"loio\", or \"loio_partial\".")
 }
+
+out_dir       <- file.path(
+  output_r_root,
+  c(holdout = "H1", loio = "H1_loio", loio_partial = "H1_loio_partial")[[within_source]]
+)
+loio_dir      <- file.path(output_r_root, "Within_LOIO")
+loio_file     <- c(loio = "metrics_all.csv", loio_partial = "metrics_all_incl_partial.csv")
 
 csv_dir   <- file.path(out_dir, "csv")
 plots_dir <- file.path(out_dir, "plots")
@@ -74,8 +81,8 @@ plot_styles       <- c("bw", "color")
 # ── 5. Input file registry ────────────────────────────────────────────────────
 
 metric_file <- function(model, comparison) {
-  if (comparison == "within" && within_source == "loio") {
-    return(file.path(loio_dir, model, "statistics", "metrics_all.csv"))
+  if (comparison == "within" && within_source != "holdout") {
+    return(file.path(loio_dir, model, "statistics", loio_file[[within_source]]))
   }
   mode_prefix <- ifelse(comparison == "within", "Within", "Cross")
   file.path(models_dir, model, paste0(mode_prefix, "_", model), "statistics", "metrics_all.csv")
