@@ -15,6 +15,9 @@
 #   python within_loio.py --seeds 42 43 44 45 46  # repeated runs, averaged per dataset
 #   python within_loio.py --device mps            # Apple GPU (not bit-reproducible)
 #
+# With several models, each model runs in its own process (avoids OpenMP clashes
+# between PyTorch and LightGBM on macOS).
+#
 # Outputs: <base>/Output_checks/Within_LOIO/<model>/statistics/
 #   metrics_all.csv           one row per dataset with complete LOIO coverage (used by H1.R)
 #   metrics_all_incl_partial.csv  same, incl. datasets in which a fold had to be skipped
@@ -29,6 +32,8 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
+import subprocess
+import sys
 import time
 from pathlib import Path
 from types import ModuleType
@@ -322,6 +327,25 @@ def holdout_comparison(base: Path, out_root: Path, names: list[str]) -> None:
 # =========================================================
 # Main
 # =========================================================
+def run_models_separately(args: argparse.Namespace) -> int:
+    failed = []
+    for name in args.models:
+        cmd = [sys.executable, str(Path(__file__).resolve()), "--models", name,
+               "--seeds", *map(str, args.seeds), "--device", args.device]
+        if args.base is not None:
+            cmd += ["--base", str(args.base)]
+        log(f"\n[INFO] ===== Starting {name} in a separate process =====")
+        if subprocess.run(cmd).returncode != 0:
+            failed.append(name)
+            log(f"[ERROR] {name} failed; see the messages above. Continuing with the next model.")
+
+    if failed:
+        log(f"\n[ERROR] Failed models: {', '.join(failed)}")
+    else:
+        log("\n[OK] All models finished.")
+    return 1 if failed else 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Within-dataset leave-one-individual-out evaluation.")
     parser.add_argument("--base", type=Path, default=None, help="Analysis root folder (default: BASE of the model scripts)")
@@ -330,6 +354,12 @@ def main() -> int:
     parser.add_argument("--device", default="cpu", choices=["cpu", "mps"],
                         help="Device for CNN/ResNet; cpu is deterministic, mps is faster but not bit-reproducible")
     args = parser.parse_args()
+
+    # Several models: run each in its own process. PyTorch (CNN, ResNet, HYDRA via
+    # aeon) and LightGBM ship separate OpenMP runtimes, which can abort a shared
+    # process on macOS ("OMP: Error #15").
+    if len(args.models) > 1:
+        return run_models_separately(args)
 
     device = None
     if any(MODEL_SPECS[m]["torch"] for m in args.models):
