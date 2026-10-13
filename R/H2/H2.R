@@ -34,7 +34,8 @@ p_value_position <- "bottom_right"   # "top_left" or "bottom_right"
 # ── 3. Paths ──────────────────────────────────────────────────────────────────
 base_dir      <- "/Volumes/Z Slim/11_05_2026_Data_Analysis"
 models_dir    <- file.path(base_dir, "Models")
-output_r_root <- file.path(base_dir, "Output_R")
+# Re-analysis outputs go to Output_checks; the thesis outputs in Output_R stay untouched.
+output_r_root <- file.path(base_dir, "Output_checks")
 out_dir       <- file.path(output_r_root, "H2")
 
 csv_dir   <- file.path(out_dir, "csv")

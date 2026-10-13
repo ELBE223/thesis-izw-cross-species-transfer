@@ -14,7 +14,7 @@
 #   python check_splits_and_training.py
 #   python check_splits_and_training.py --base "/Volumes/Z Slim/11_05_2026_Data_Analysis"
 #
-# Outputs are written to <base>/Output_checks/.
+# Outputs are written to <base>/Output_checks/splits_and_training/.
 
 from __future__ import annotations
 
@@ -223,7 +223,7 @@ def main() -> int:
     for module in (raw_mod, feat_mod):
         set_base(module, base)
 
-    out_dir = base / "Output_checks"
+    out_dir = base / "Output_checks" / "splits_and_training"
     out_dir.mkdir(parents=True, exist_ok=True)
     report: list[str] = [f"Base: {base}", ""]
 
