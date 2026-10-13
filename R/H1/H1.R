@@ -31,6 +31,12 @@ pacman::p_load(readr, dplyr, tidyr, ggplot2, purrr, tibble)
 show_p_values    <- FALSE
 p_value_position <- "bottom_right"   # "top_left" or "bottom_right"
 
+# Within-dataset baseline:
+# - "holdout": original Within_* mode (25 % individual holdout, Models/<model>/Within_<model>)
+# - "loio":    leave-one-individual-out from Python/within_loio.py
+#              (Output_checks/Within_LOIO/<model>); results are written to Output_checks/H1_loio
+within_source <- "holdout"
+
 
 # ── 3. Paths ──────────────────────────────────────────────────────────────────
 
@@ -38,7 +44,12 @@ base_dir      <- "/Volumes/Z Slim/11_05_2026_Data_Analysis"
 models_dir    <- file.path(base_dir, "Models")
 # Re-analysis outputs go to Output_checks; the thesis outputs in Output_R stay untouched.
 output_r_root <- file.path(base_dir, "Output_checks")
-out_dir       <- file.path(output_r_root, "H1")
+out_dir       <- file.path(output_r_root, ifelse(within_source == "loio", "H1_loio", "H1"))
+loio_dir      <- file.path(output_r_root, "Within_LOIO")
+
+if (!within_source %in% c("holdout", "loio")) {
+  stop("within_source must be \"holdout\" or \"loio\".")
+}
 
 csv_dir   <- file.path(out_dir, "csv")
 plots_dir <- file.path(out_dir, "plots")
@@ -63,6 +74,9 @@ plot_styles       <- c("bw", "color")
 # ── 5. Input file registry ────────────────────────────────────────────────────
 
 metric_file <- function(model, comparison) {
+  if (comparison == "within" && within_source == "loio") {
+    return(file.path(loio_dir, model, "statistics", "metrics_all.csv"))
+  }
   mode_prefix <- ifelse(comparison == "within", "Within", "Cross")
   file.path(models_dir, model, paste0(mode_prefix, "_", model), "statistics", "metrics_all.csv")
 }
@@ -922,6 +936,7 @@ print_section("EXPORTING TXT")
 report_lines <- c(
   paste0("H1 output folder: ", out_dir),
   paste0("Models input folder: ", models_dir),
+  paste0("Within baseline: ", within_source),
   paste0("Created on: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S")),
   "",
   "This report contains the main H1 results and checks.",
