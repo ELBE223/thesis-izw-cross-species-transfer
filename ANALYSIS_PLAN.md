@@ -95,6 +95,17 @@ the primary response.
 - Model: primary model with z(gawdis distance) in place of z(core Gower
   distance). The estimated trait weights are reported.
 
+Amendment (2026-10-13, before any S3 model was fitted; based on the trait data
+only): gawdis with equal weights reproduced the primary core Gower distances
+exactly (maximum absolute difference 2e-16). The analytic solution returned
+negative weights for log body mass (-0.23), body configuration type (-0.16),
+and dominant feeding/foraging mode (-0.04), which cannot be interpreted as
+trait weights; gawdis itself advises `w.type = "optimized"` in this case. S3
+therefore uses `w.type = "optimized"` with the gawdis defaults
+(`opti.min.weight = 0.01`, `opti.max.weight = 1`, `opti.maxiter = 300`),
+`ord = "classic"`, and `set.seed(42)`. The analytic weights are reported for
+transparency.
+
 ## 4. Rules that apply to all re-analyses
 
 - No inclusion thresholds based on classification performance are used.
