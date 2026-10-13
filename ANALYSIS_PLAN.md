@@ -74,9 +74,26 @@ the primary response.
   under transfer associated with trait distance?
 - log(retention) is reported as an additional check of distributional assumptions.
 
-### S3: Alternative distance measure
+### S3: Balanced trait weights (gawdis)
 
-To be specified before computation (decision pending, see commit history).
+- Rationale: with equal weights in the Gower distance, traits do not contribute
+  equally to the multi-trait distance. In the core trait set, body configuration
+  type and dominant feeding/foraging mode (nominal) together account for 44 % of
+  the summed single-trait dissimilarities across the 36 species pairs (expected
+  with equal contributions: 2/7 = 29 %), and single-trait correlations with the
+  multi-trait distance range from 0.42 (directional change tendency) to 0.75
+  (feeding/foraging mode). These figures describe the trait data only; no
+  transfer results were used.
+- Distance: Gower distance on the same seven core traits with weights chosen so
+  that each trait correlates equally with the multi-trait distance (de Bello et
+  al., 2021, Methods in Ecology and Evolution 12: 443-448; R package gawdis,
+  `w.type = "analytic"`). Ordinal traits are treated as integer codes, as in the
+  primary distance (`ord = "classic"`). If the analytic solution fails,
+  `w.type = "optimized"` with a fixed seed is used and reported.
+- Check: gawdis with equal weights must reproduce the primary core Gower
+  distances (Table S13).
+- Model: primary model with z(gawdis distance) in place of z(core Gower
+  distance). The estimated trait weights are reported.
 
 ## 4. Rules that apply to all re-analyses
 
