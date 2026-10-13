@@ -128,7 +128,14 @@ fmt_num <- function(x, digits = 3) {
 }
 
 fmt_p <- function(x) {
-  ifelse(is.na(x), "NA", ifelse(x < 0.001, "< 0.001", sprintf("%.3f", round(x, 3))))
+  # Show four decimals when three would round to the 0.05 threshold.
+  ifelse(
+    is.na(x), "NA",
+    ifelse(
+      x < 0.001, "< 0.001",
+      ifelse(round(x, 3) == 0.05, sprintf("%.4f", x), sprintf("%.3f", round(x, 3)))
+    )
+  )
 }
 
 format_median_iqr <- function(median_x, q1_x, q3_x) {
@@ -308,6 +315,7 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
       statistic     = numeric(),
       p_value       = numeric(),
       p_adj_holm    = numeric(),
+      test_method   = character(),
       median_diff   = numeric(),
       mean_diff     = numeric(),
       rank_biserial = numeric(),
@@ -344,6 +352,7 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
         n_pairs       = n_pairs,
         statistic     = NA_real_,
         p_value       = NA_real_,
+        test_method   = NA_character_,
         median_diff   = ifelse(length(diffs) == 0, NA_real_, median(diffs, na.rm = TRUE)),
         mean_diff     = ifelse(length(diffs) == 0, NA_real_, mean(diffs, na.rm = TRUE)),
         rank_biserial = NA_real_,
@@ -351,8 +360,10 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
       ))
     }
     
+    # Exact p-values; R falls back to the normal approximation (with a warning)
+    # only if ties are present. test_method records which was used.
     tmp <- tryCatch(
-      wilcox.test(x_test, y_test, paired = TRUE, exact = FALSE),
+      wilcox.test(x_test, y_test, paired = TRUE, exact = TRUE),
       error = function(e) NULL
     )
     
@@ -365,6 +376,7 @@ safe_pairwise_wilcox_extended <- function(df, value_col, group_col, block_col,
       n_pairs       = n_pairs,
       statistic     = stat,
       p_value       = if (is.null(tmp)) NA_real_ else tmp$p.value,
+      test_method   = if (is.null(tmp)) NA_character_ else tmp$method,
       median_diff   = median(diffs_test, na.rm = TRUE),
       mean_diff     = mean(diffs_test, na.rm = TRUE),
       rank_biserial = rbc,
@@ -408,7 +420,7 @@ get_plot_style <- function(plot_style = c("bw", "color")) {
       behavior_fill = c(
         "Foraging"   = "#66C2A5",
         "Locomotion" = "#8DA0CB",
-        "Resting"    = "#E78"
+        "Resting"    = "#EE7788"
       ),
       comparison_fill = c(
         "cross"  = "#0072B2",
@@ -766,7 +778,7 @@ h2_posthoc_appendix <- cross_posthoc %>%
   dplyr::select(
     model, group_1, group_2, n_pairs, statistic,
     median_diff, mean_diff, rank_biserial,
-    p_value, p_label, p_adj_holm, p_adj_holm_label, direction
+    p_value, p_label, p_adj_holm, p_adj_holm_label, direction, test_method
   )
 
 transfer_posthoc_appendix <- transfer_posthoc %>%
@@ -782,7 +794,7 @@ transfer_posthoc_appendix <- transfer_posthoc %>%
   dplyr::select(
     model, group_1, group_2, n_pairs, statistic,
     median_diff, mean_diff, rank_biserial,
-    p_value, p_label, p_adj_holm, p_adj_holm_label, direction
+    p_value, p_label, p_adj_holm, p_adj_holm_label, direction, test_method
   )
 
 h2_posthoc_text_summary <- h2_posthoc_appendix %>%

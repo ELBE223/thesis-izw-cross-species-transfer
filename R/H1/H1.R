@@ -108,7 +108,14 @@ fmt_num <- function(x, digits = 3) {
 }
 
 fmt_p <- function(x) {
-  ifelse(is.na(x), "NA", ifelse(x < 0.001, "< 0.001", sprintf("%.3f", round(x, 3))))
+  # Show four decimals when three would round to the 0.05 threshold.
+  ifelse(
+    is.na(x), "NA",
+    ifelse(
+      x < 0.001, "< 0.001",
+      ifelse(round(x, 3) == 0.05, sprintf("%.4f", x), sprintf("%.3f", round(x, 3)))
+    )
+  )
 }
 
 format_mean_sd <- function(mean_val, sd_val) {
@@ -269,6 +276,7 @@ run_paired_wilcox <- function(df, value_col) {
     paired_n      = nrow(paired_df),
     statistic     = NA_real_,
     p_value       = NA_real_,
+    test_method   = NA_character_,
     mean_gap      = NA_real_,
     median_gap    = NA_real_,
     rank_biserial = NA_real_
@@ -280,8 +288,10 @@ run_paired_wilcox <- function(df, value_col) {
   
   diffs <- paired_df$within - paired_df$cross
   
+  # Exact p-values; R falls back to the normal approximation (with a warning)
+  # only if ties or zero differences are present. test_method records which was used.
   test_result <- tryCatch(
-    wilcox.test(paired_df$within, paired_df$cross, paired = TRUE, exact = FALSE),
+    wilcox.test(paired_df$within, paired_df$cross, paired = TRUE, exact = TRUE),
     error = function(e) NULL
   )
   
@@ -300,6 +310,7 @@ run_paired_wilcox <- function(df, value_col) {
     paired_n      = nrow(paired_df),
     statistic     = unname(test_result$statistic),
     p_value       = test_result$p.value,
+    test_method   = test_result$method,
     mean_gap      = mean(diffs, na.rm = TRUE),
     median_gap    = median(diffs, na.rm = TRUE),
     rank_biserial = signed_rank_biserial(diffs)
@@ -734,7 +745,8 @@ h1_macro_f1_table <- paired_macro_f1_summary %>%
     paired_median_gap = round(paired_median_gap_macro_f1, 3),
     wilcoxon_v        = round(wilcoxon_v_macro_f1, 3),
     rank_biserial     = round(rank_biserial_macro_f1, 3),
-    p_value           = signif(p_macro_f1, 3)
+    p_value           = signif(p_macro_f1, 3),
+    test_method
   )
 
 h1_accuracy_table <- paired_accuracy_summary %>%
@@ -770,7 +782,8 @@ h1_accuracy_table <- paired_accuracy_summary %>%
     paired_median_gap = round(paired_median_gap_accuracy, 3),
     wilcoxon_v        = round(wilcoxon_v_accuracy, 3),
     rank_biserial     = round(rank_biserial_accuracy, 3),
-    p_value           = signif(p_accuracy, 3)
+    p_value           = signif(p_accuracy, 3),
+    test_method
   )
 
 
